@@ -1,0 +1,47 @@
+.footer__distance {
+    padding: 24px 116px;
+}
+
+.footer__background-yellow-pattern {
+    background: url("../../media/images/footer-background.png") no-repeat center / cover;
+}
+
+
+.footer__info {
+    display: flex;
+    gap: 140px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer__info-list-info {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer__info-list-contact {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+
+
+    .footer__info-list-contact-link {
+        display: flex;
+        gap: 10px;
+
+    }
+
+
+
+}
+
+.footer__item-contact-separated {
+    margin-left: 24px;
+}
+
+

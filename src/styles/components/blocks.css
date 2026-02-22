@@ -1,0 +1,15 @@
+.breadcrumbs {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-block: 24px;
+
+    .selected {
+        color: var(--color-gray);
+    }
+
+    a:not(.selected) {
+        color: var(--color-dark-gray);
+    }
+}

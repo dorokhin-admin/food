@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <script src="scripts/script.js" type="module" defer ></script>
+    <link rel="stylesheet" href="styles/fonts.css">
+</head>
+
+
+
+
+
+<body>
+
+<header class="header">
+    <div class="header__inner header__distance">
+        <a class="header__logo logo" href="">
+            <img class="logo__image" src="media/svgs/icon.svg" alt="website-logo" width="152" height="32">
+        </a>
+
+
+        <div class="header__catalog-wrapper">
+            <button class="header__catalog-button" type="button">
+                <img class="header__catalog-image" src="./media/svgs/catalog-button-icon.svg" alt=""  width="24" height="24">
+                <span class="header__catalog-text">Каталог</span>
+            </button>
+            <form class="quick-search" action="" >
+                <label for="sdfsfTWETRWTETEWTWETTWETW"></label>
+                <input class="quick-search__input" id="sdfsfTWETRWTETEWTWETTWETW" type="text" placeholder="Найти товар">
+                <button class="quick-search__search-button" type="submit">
+                    <img class="quick-search__search-image" src="./media/svgs/search-icon.svg" alt="search-icon" width="24" height="24">
+                </button>
+            </form>
+        </div>
+
+        <nav class="header__menu">
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a class="header__menu-item-link" href="">
+                        <img src="media/svgs/menu-icon-favorite.svg" alt="" class="header__menu-image" width="22" height="19">
+                        <span class="">Избранное</span>
+                    </a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-item-link" href="">
+                        <img src="media/svgs/menu-icon-orders.svg" alt="" class="header__menu-image" width="24" height="24">
+                        <span class="">Заказы</span>
+                    </a>
+                </li>
+                <li class="header__menu-item">
+                    <a class="header__menu-item-link" href="">
+                        <img src="media/svgs/menu-icon-cart.svg" alt="" class="header__menu-image" width="24" height="24">
+                        <span class="">Корзина</span>
+                    </a>
+                </li>
+                <li class="header__menu-item-profile ">
+                    <button class="header__menu-item-profile-button">
+                        <img src="./media/images/menu-profile-image.png" alt="" class="header__menu-image" width="40" height="40">
+                        <span>Алексей</span>
+                        <img src="media/svgs/menu-profile-arrow.svg" alt="" width="13" height="7">
+                    </button>
+
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main class="main main__yellow main__distance">
+    <div class="main__container">
+        <div class="catalog catalog-categories">
+            <div class="main__breadcrumbs breadcrumbs">
+                <a class="breadcrumbs-link" href="" >Главная</a>
+                <img class="" src="./media/svgs/arrow-right.svg" alt="Arrow that points to the right" width="9" height="6">
+                <a class="breadcrumbs-link selected" href="" >Каталог</a>
+
+            </div>
+            <div class="main__catalog catalog ">
+                <h1 class="catalog__header">Каталог</h1>
+                <div class="catalog__product-categories-food">
+                    <a class="catalog__category-food-item  catalog__product-category-item-wide-1 catalog__category-food-item-dairy" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-dairy">Молоко, сыр, яйцо</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-bread" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-bread">Хлеб</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-vegetables" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-vegetables">Фрукты и овощи</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-frozen" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-frozen">Замороженные продукты</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-drinks" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-drinks">Напитки</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-confectionery" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-confectionery">Кондитерские изделия</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-tea" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-tea">Чай, кофе</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-groceries" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-groceries">Бакалея</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-healthy" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-healthy">Здоровое питание</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-item-wide-2 catalog__category-food-item-zoo" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-zoo">Зоотовары</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-baby" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-baby">Детское питание</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-item-wide-3 catalog__category-food-item-meat" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-meat">Мясо, птица, колбаса</span>
+                    </a>
+                    <a class="catalog__category-food-item catalog__category-food-item-non-food" href="">
+                        <span class="catalog__product-categories-item-text catalog__category-food-text-non-food">Непродовольственные товары</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="main__catalog-section catalog-section">
+            <div class="catalog-section__breadcrumbs breadcrumbs">
+                <a class="breadcrumbs-link" href="" >Главная</a>
+                <img class="" src="./media/svgs/arrow-right.svg" alt="Arrow that points to the right" width="9" height="6">
+                <a class="breadcrumbs-link" href="" >Каталог</a>
+                <img class="" src="./media/svgs/arrow-right.svg" alt="Arrow that points to the right" width="9" height="6">
+                <a class="breadcrumbs-link selected" href="" >Молоко, сыр, яйцо</a>
+
+
+            </div>
+            <h1 class="catalog-section__title">Молоко, сыр, яйцо</h1>
+            <div class="catalog-section__food-categories">
+                <button class="catalog-section__category-button background-gray background-padding">Товары нашего производства</button>
+                <button class="catalog-section__category-button background-gray background-padding">Полезное питание</button>
+                <button class="catalog-section__category-button background-gray background-padding">Без ГМО</button>
+            </div>
+            <div class="catalog-section__interface">
+                <aside class="catalog-section__filters">
+                    <div class="catalog-section__filter-text background-gray">
+                        <span class="">Фильтр</span>
+                    </div>
+                    <div class="catalog-section__filter-price">
+                        <div class="catalog-section__filter-price-reset">
+                            <span class="catalog-section__filter-price-reset-title">
+                                Цена
+                            </span>
+                            <button class="catalog-section__filter-price-reset-button background-gray background-padding" type="reset">Очистить</button>
+                        </div>
+                        <div class="catalog-section__filter-price-range">
+                            <label for="" class=""></label>
+                            <input type="number" class="catalog-section__filter-price-range-input" id="" value="1">
+                            <img src="./media/svgs/line-divider.svg" alt="" class="" width="15" height="2">
+                            <label for="" class=""></label>
+                            <input type="number" class="catalog-section__filter-price-range-input" id="" value="100">
+                        </div>
+                        <div class="catalog-section__filter-price-slider"></div>
+                    </div>
+                    <div class="catalog-section__filter-sub-category">
+                        <ul class="catalog-section__filter-sub-category-list">
+                            <li class=catalog-section__filter-sub-category-item">
+                                <span>
+                                    Молоко
+                                </span>
+                            </li>
+                            <li class=catalog-section__filter-sub-category-item">
+                                <span>
+                                    Сливки
+                                </span>
+                            </li>
+                            <li class=catalog-section__filter-sub-category-item">
+                                <span>
+                                    Яйцо
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="catalog-section__filter-stock">
+                        <button>Js castum    </button>
+                        <span class="catalog-section__filter-stock-text">В наличии</span>
+                    </div>
+                    <button class="catalog-section__filter-button-apply background-orange background-padding-equal" type="submit">
+                        Применить
+                    </button>
+                </aside>
+                <div class="catalog-section__products">
+                    <div class="catalog-section__products-active-filters">
+                        <button class="catalog-section__products-filter-button background-green background-padding">
+                            <span class="">Фильтр 4</span>
+                            <img class="" src="./media/svgs/cancel-button.svg" alt="Cancel button" width="13" height="13">
+                        </button>
+                        <button class="catalog-section__products-filter-button background-green background-padding">
+                            <span class="">Цена от 99 до 2599</span>
+                            <img class="" src="./media/svgs/cancel-button.svg" alt="Cancel button" width="13" height="13">
+                        </button>
+                        <button class="catalog-section__products-filter-button background-gray background-padding">
+                            <span class="">Очистить фильтры</span>
+                            <img class="" src="./media/svgs/cancel-button.svg" alt="Cancel button" width="13" height="13">
+                        </button>
+                    </div>
+                    <div class="catalog-section__products-cards">
+                        <div class="catalog-section__products-card">
+                            <div class="catalog-section__products-card-header">
+                                <img src="./media/images/catalog-section/product-1.png" alt="Product image" class="catalog-section__products-card-image" width="272" height="160">
+                                <button class="catalog-section__products-card-header-button-favorite background-gray">
+                                    <img src="./media/svgs/card-button-favorite.svg" alt="" class="Add to favorite button">
+                                </button>
+                            </div>
+                            <div class="catalog-section__products-card-price">
+                                <span class="best-price">139,99 ₽</span>
+                            </div>
+                            <div class="catalog-section__products-card-price-options">
+                            </div>
+                            <p class="">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+                            <div class="catalog-section__card-rating">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+
+                            </div>
+                            <button class="catalog-section__products-card-button-cart border-green">
+                                В корзину
+                            </button>
+                        </div>
+
+                        <div class="catalog-section__products-card">
+                            <div class="catalog-section__products-card-header">
+                                <img src="./media/images/catalog-section/product-2.png" alt="Product image" class="catalog-section__products-card-image" width="272" height="160">
+                                <button class="catalog-section__products-card-header-button-favorite background-gray">
+                                    <img src="./media/svgs/card-button-favorite.svg" alt="" class="Add to favorite button" width="22" height="19">
+                                </button>
+                                <span class="catalog-section__products-card-header-sale-text background-orange">-50%</span>
+                            </div>
+                            <div class="catalog-section__products-card-price">
+                                <div class="catalog-section__products-card-price-options">
+                                    <span class="best-price">69,99 ₽</span>
+                                    <span class="">С картой</span>
+                                </div>
+                                <div class="catalog-section__products-card-price-options">
+                                    <span class="">140,50 ₽</span>
+                                    <span class="">Обычная</span>
+                                </div>
+                            </div>
+                            <p class="">Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное ...</p>
+                            <div class="catalog-section__card-rating">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                            </div>
+                            <button class="catalog-section__products-card-button-cart border-green">
+                                В корзину
+                            </button>
+
+
+
+                        </div>
+                        <div class="catalog-section__products-card">
+                            <div class="catalog-section__products-card-header">
+                                <img src="./media/images/catalog-section/product-3.png" alt="Product image" class="catalog-section__products-card-image" width="272" height="160">
+                                <button class="catalog-section__products-card-header-button-favorite background-gray">
+                                    <img src="./media/svgs/card-button-favorite.svg" alt="" class="Add to favorite button">
+                                </button>
+                                <span class="catalog-section__products-card-header-sale-text background-orange">-50%</span>
+                            </div>
+                            <div class="catalog-section__products-card-price">
+                                <div class="catalog-section__products-card-price-options">
+                                    <span class="best-price">77,99 ₽</span>
+                                    <span class="">С картой</span>
+                                </div>
+                                <div class="catalog-section__products-card-price-options">
+                                    <span class="">168,50 ₽</span>
+                                    <span class="">Обычная</span>
+                                </div>
+                            </div>
+                            <p class="">Молоко сгущенное РОГАЧЕВ Егорка, цельное с сахаром...</p>
+                            <div class="catalog-section__card-rating">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                            </div>
+                            <button class="catalog-section__products-card-button-cart border-green">
+                                В корзину
+                            </button>
+
+
+
+                        </div>
+                        <div class="catalog-section__products-card">
+                            <div class="catalog-section__products-card-header">
+                                <img src="./media/images/catalog-section/product-4.png" alt="Product image" class="catalog-section__products-card-image" width="272" height="160">
+                                <button class="catalog-section__products-card-header-button-favorite background-gray">
+                                    <img src="./media/svgs/card-button-favorite.svg" alt="" class="Add to favorite button">
+                                </button>
+                            </div>
+                            <div class="catalog-section__products-card-price">
+                                <div class="catalog-section__products-card-price-options">
+                                    <span class="best-price">192,99 ₽</span>
+                                </div>
+                                <div class="catalog-section__products-card-price-options"></div>
+
+                            </div>
+                            <p class="">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+                            <div class="catalog-section__card-rating">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                            </div>
+                            <button class="catalog-section__products-card-button-cart border-green">
+                                В корзину
+                            </button>
+
+
+
+                        </div>
+                        <div class="catalog-section__products-card">
+                            <div class="catalog-section__products-card-header">
+                                <img src="./media/images/catalog-section/product-5.png" alt="Product image" class="catalog-section__products-card-image" width="272" height="160">
+
+                                <button class="catalog-section__products-card-header-button-favorite background-gray">
+                                    <img src="./media/svgs/card-button-favorite.svg" alt="" class="Add to favorite button">
+                                </button>
+                            </div>
+                            <div class="catalog-section__products-card-price">
+                                <div class="catalog-section__products-card-price-options">
+                                    <span class="best-price">29,99 ₽</span>
+                                </div>
+                                <div class="catalog-section__products-card-price-options"></div>
+
+                            </div>
+                            <p class="">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+                            <div class="catalog-section__card-rating">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                            </div>
+                            <button class="catalog-section__products-card-button-cart border-green">
+                                В корзину
+                            </button>
+
+
+
+                        </div>
+                        <div class="catalog-section__products-card">
+                            <div class="catalog-section__products-card-header">
+                                <img src="./media/images/catalog-section/product-6.png" alt="Product image" class="catalog-section__products-card-image" width="272" height="160">
+                                <button class="catalog-section__products-card-header-button-favorite background-gray">
+                                    <img src="./media/svgs/card-button-favorite.svg" alt="" class="Add to favorite button">
+                                </button>
+                            </div>
+                            <div class="catalog-section__products-card-price">
+                                <div class="catalog-section__products-card-price-options">
+                                    <span class="best-price">29,99 ₽</span>
+                                </div>
+                                <div class="catalog-section__products-card-price-options"></div>
+
+                            </div>
+                            <p class="">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+                            <div class="catalog-section__card-rating">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                                <img src="./media/svgs/card-rating-star-gray.svg" alt="" class="Product rating score with stars">
+                            </div>
+                            <button class="catalog-section__products-card-button-cart border-green">
+                                В корзину
+                            </button>
+
+
+
+                        </div>
+
+                    </div>
+                    <button class="catalog-section__products-button-more background-gray background-padding-equal" type="button">
+                        Показать ещё
+                    </button>
+                    <div class="catalog-section__products-pages">
+                        
+                        <button class="catalog-section__products-pages-go-start">
+                            <img src="./media/svgs/arrow-left-double.svg" alt="" class="" width="13" height="13">
+                        </button>
+                        <button class="catalog-section__products-pages-start-go-previous">
+                            <img src="./media/svgs/arrow-left.svg" alt="" class="" width="7" height="13">
+                        </button>
+                        <ul class="catalog-section__products-pages-list">
+                            <li class="catalog-section__products-pages-item">
+                                <button class="catalog-section__products-pages-item-button">1</button>
+                            </li>
+                            <li class="catalog-section__products-pages-item">
+                                <button class="catalog-section__products-pages-item-button">2</button>
+                            </li>
+                            <li class="catalog-section__products-pages-list-item">
+                                <button class="catalog-section__products-pages-item-button">3</button>
+                            </li>
+                            <li class="catalog-section__products-pages-list-item">
+                                <button class="catalog-section__products-pages-item-button">4</button>
+                            </li>
+                            <li class="catalog-section__products-pages-list-item">
+                                <button class="catalog-section__products-pages-item-button">5</button>
+                            </li>
+                            <li class="catalog-section__products-pages-list-item">
+                                <button class="catalog-section__products-pages-item-button">6</button>
+                            </li>
+                            <li class="catalog-section__products-pages-list-item">
+                                <button class="catalog-section__products-pages-item-button">7</button>
+                            </li>
+                            <li class="catalog-section__products-pages-list-item">
+                                <button class="catalog-section__products-pages-item-button">8</button>
+                            </li>
+                        </ul>
+                        <button class="catalog-section__products-pages-start-go-next">
+                                <img src="./media/svgs/arrow-right.svg" alt="" class="" width="7" height="13"></button>
+                        <button class="catalog-section__products-pages-start-go-end">
+                                <img src="./media/svgs/arrow-right-double.svg" alt="" class="" width="13" height="13">
+                            </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</main>
+
+<footer class="footer footer__background-yellow-pattern footer__distance">
+    <div class="footer__info info">
+        <ul class="footer__info-list-info  list-info">
+            <li class="footer__info-item">
+                <a href="">
+                    <img src="././media/svgs/footer-logo.svg" alt="footer-website-logo" class="" width="64" height="44">
+                </a>
+            </li>
+            <li class="footer__info-item">
+                <a href="">
+                    <span class="">О компании</span>
+                </a>
+            </li>
+            <li class="footer__info-item">
+                <a href="">
+                    <span class="">Контакты</span>
+                </a>
+
+            </li>
+            <li class="footer__info-item">
+                <a href="">
+                    <span class="">Вакансии</span>
+                </a>
+            </li>
+            <li class="footer__info-item">
+                <a href=""><span class="">Статьи</span></a>
+            </li>
+            <li class="footer__info-item">
+                <a href="">
+                    <span class="">Политика обработки персональных данных</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="footer__info-list-contact list-contact">
+            <li class="footer__info-item-contact">
+                <a href="">
+                    <img src="././media/svgs/contacts/instagram.svg" alt="Instagram logo" width="24" height="24">
+                </a>
+            </li>
+            <li class="footer__info-item-contacts">
+                <a href="">
+                    <img src="././media/svgs/contacts/vk.svg" alt="Vk logo" width="24" height="24">
+                </a>
+            </li>
+            <li class="footer__info-item-contact">
+                <a href="">
+                    <img src="././media/svgs/contacts/facebook.svg" alt="Facebook logo" width="24" height="24">
+                </a>
+            </li>
+            <li class="footer__info-list-contact">
+                <a href="">
+                    <img src="././media/svgs/contacts/classmates.svg" alt="Classmates logo" width="24" height="24">
+                </a>
+            </li>
+            <li class="footer__info-item-contact footer__item-contact-separated">
+                <a class="footer__info-list-contact-link" href="">
+                    <img src="././media/svgs/contacts/phone.svg" alt="Phone logo" width="24" height="24">
+                    <span>8 800 777 33 33</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

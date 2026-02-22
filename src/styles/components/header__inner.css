@@ -1,0 +1,142 @@
+.header__distance {
+    padding: 16px 120px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+    font-weight: 400;
+}
+
+
+
+.header__menu {
+    padding-inline: 12px;
+
+
+}
+
+
+
+
+.header__catalog-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    gap: 8px;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.header__catalog-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    height: 40px;
+    box-sizing: border-box;
+
+    flex-grow: 1;
+    max-width: 650px;
+
+    font-size: var(--text-size-sm);
+
+}
+
+.quick-search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100%;
+    box-sizing: border-box;
+
+    border: 2px solid var(--color-green);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+
+.quick-search__input {
+    flex-grow: 1;
+    padding-left: 10px;
+    height: 100%;
+    min-width: 0;
+
+
+    &::placeholder {
+        color: var(--color-gray);
+    }
+}
+
+.quick-search__search-button {
+    flex-shrink: 0;
+    height: 100%;
+    padding-inline: 10px;
+
+
+}
+
+.header__distance {
+    padding-inline: 116px;
+}
+
+
+.header__menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    font-size: var(--text-size-xs);
+
+    .header__menu-item {
+        color: var(--color-dark-gray)
+    }
+
+    .header__menu-item-profile {
+        font-size: var(--text-size-sm);
+        color: var(--color-dark)
+
+    }
+}
+
+
+
+
+.header__menu-item-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    color: var(--color-gray)
+
+
+}
+
+.header__menu-item-profile-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    color: var(--color-dark);
+}
+
+
+
+
