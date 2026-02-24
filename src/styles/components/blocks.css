@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: flex-start;
     padding-block: 24px;
+    font-size: var(--text-size-xs);
 
     .selected {
         color: var(--color-gray);
