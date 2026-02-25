@@ -9,47 +9,47 @@
     <body>
      <header>
          <div class="container">
-              <div class='header-line'>
-               <img class='smile' src="IMAGES/Group.png" alt="Что-то">
-                <h1 class="title">СЕВЕРЯНОЧКА</h1>
-                <div class='catalog-search'>
+              <div class='header__inner'>
+               <img class='header__logo-icon' src="IMAGES/Group.png" alt="header__logo-iconо">
+                <h1 class="header__logo-text">СЕВЕРЯНОЧКА</h1>
+                <div class='header__controls'>
                    <button class='catalog'>
                     <img src="IMAGES/menu.png">
                     Каталог
                 </button>
-            <div class='searchButton'>
-                    <input class='search' type="text" placeholder=" Найти товар">
-                        <img src="IMAGES/search.png" alt="Что-то">
+            <div class='header__search'>
+                    <input class='header__search-input' type="text" placeholder=" Найти товар">
+                        <img src="IMAGES/search.png" alt="header__search-input">
                         </div>
                     </div>
-                    <div class='nav'>
-                    <a class='best' href="#">
-                        <img class='heart' src='IMAGES/heart.png' alt="Что-то">
-                          <span class='micro'>Избранное</span>
+                    <div class='header__nav'>
+                    <a class='header__link header__link--favorite' href="#">
+                        <img class='heart' src='IMAGES/heart.png' alt="header__link--favorite">
+                          <span class='header__link-text'>Избранное</span>
                     </a>
 
-                    <a class='orders' href="#">
-                        <img class='orderImg' src='IMAGES/box.png' alt="Что-то">
-                              <span class='micro'>Заказы</span>
+                    <a class='header__link header__link--orders' href="#">
+                        <img class='orderImg' src='IMAGES/box.png' alt="header__link--orders">
+                              <span class='header__link-text'>Заказы</span>
                     </a>
 
-                    <a class='cart' href="#">
-                        <img src='IMAGES/shopping-cart.png'alt="Что-то">
-                            <span class='micro'>Корзина</span>
+                    <a class='header__link header__link--cart' href="#">
+                        <img src='IMAGES/shopping-cart.png'alt="header__link--cart">
+                            <span class='header__link-text'>Корзина</span>
                     </a>
 
 
-                   <a class='avatar' href="#">
+                   <a class='header__profile' href="#">
                        <img src="IMAGES/avatar.png" alt="Что-то">
-                       <span class="avatar-name">Алексей</span>
+                       <span class="header__profile-name">Алексей</span>
                        <img src='IMAGES/chevron-down.png' alt="Что-то">
                    </a>
                    </div>
                </div>
             </div>
-         <div class='image-wrapper'>
-             <img class="slider-img" src='IMAGES/Sliders.png' alt="Что-то">
-             <span class="caption">Доставка бесплатно от 1000 ₽</span>
+         <div class='hero'>
+             <img class="hero__image" src='IMAGES/Sliders.png' alt="Что-то">
+             <span class="hero__caption">Доставка бесплатно от 1000 ₽</span>
          </div>
      </header>
 
@@ -59,7 +59,8 @@
             <section class="page page--home">
                 <section class="products products--sale">
                     <h2 class='section-title'>Акции</h2>
-                    <div class="products-list">                    <article class="product-card">
+                    <div class="products__list">
+                        <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item1.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -68,7 +69,7 @@
                                 В корзину
                             </button>
                         </article>
-                        <article class="product-card">
+                        <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item2.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -77,7 +78,7 @@
                                 В корзину
                             </button>
                         </article>
-                        <article class="product-card">
+                        <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -86,7 +87,7 @@
                                 В корзину
                             </button>
                         </article>
-                            <article class="product-card">
+                            <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -101,8 +102,8 @@
 
                 <section  class="products products--new">
                     <h2 class='section-title'> Новинки</h2>
-                    <div class='products-list'>
-                        <article class="product-card">
+                    <div class='products__list'>
+                        <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item4.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -111,7 +112,7 @@
                                 В корзину
                             </button>
                         </article>
-                        <article class="product-card">
+                        <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -120,7 +121,7 @@
                                 В корзину
                             </button>
                         </article>
-                        <article class="product-card">
+                        <article class="product__card">
                                     <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
                                     <button class="product-card__favorite">
                                         <img src="IMAGES/Button.png" alt="Что-то">
@@ -129,7 +130,7 @@
                                         В корзину
                                     </button>
                                 </article>
-                        <article class="product-card">
+                        <article class="product__card">
                                 <img class='product-card__image' src="IMAGES/Item2.png">
                                 <button class="product-card__favorite">
                                     <img src="IMAGES/Button.png" alt="Что-то">
@@ -143,8 +144,8 @@
 
                 <section  class="products products--history">
                     <h2 class='section-title'>Покупали раньше</h2>
-                    <div class='products-list'>
-                        <article class="product-card">
+                    <div class='products__list'>
+                        <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item5.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -153,7 +154,7 @@
                                 В корзину
                             </button>
                         </article>
-                            <article class="product-card">
+                            <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -162,7 +163,7 @@
                                 В корзину
                             </button>
                         </article>
-                                <article class="product-card">
+                                <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -171,7 +172,7 @@
                                 В корзину
                             </button>
                         </article>
-                                    <article class="product-card">
+                                    <article class="product__card">
                             <img class='product-card__image' src="IMAGES/Item2.png" alt="Что-то">
                             <button class="product-card__favorite">
                                 <img src="IMAGES/Button.png" alt="Что-то">
@@ -188,13 +189,13 @@
                     <h2 class="section-title">Специальные предложения</h2>
                     <div class='special-stocks'>
                         <article class="promo-card">
-                            <img src="IMAGES/banner-hover%20(1).png" alt="Что-то">
+                            <img src="IMAGES/banner-hover%20(1).png" alt="promo-card">
                             <div class="promo-card__content">                                <h3 class="h3">Оформите карту<br>«Северяночка»</h3>
                                 <span>И получайте бонусы при покупке<br>в магазинах и на сайте</span>
                             </div>
                         </article>
                         <article class="promo-card">
-                            <img src="IMAGES/banner.png" alt="Что-то">
+                            <img src="IMAGES/banner.png" alt="promo-card">
                             <div class="promo-card__content">                                <h3>Покупайте акционные товары</h3>
                                 <span>И получайте вдвое больше бонусов</span>
                             </div>
@@ -205,10 +206,10 @@
                 <!--map-->
                 <section class="stores">
                     <h2 class="section-title">Наши магазины</h2>
-                    <div class="buttons">
-                        <button class="shelkyar">п.Щелькяюр</button>
+                    <div class="stores__controls">
+                        <button class="stores__button">п.Щелькяюр</button>
                     </div>
-                    <img src="IMAGES/map.png" alt="Что-то">
+                    <img src="IMAGES/map.png" alt="map">
                 </section>
 
                 <section class="articles">
@@ -217,10 +218,10 @@
                         <article class="article-card">
                             <img src="IMAGES/Item(12).png" alt="Что-то">
                             <div class="paragraph-article">
-                                <span class="date">05.03.2021</span>
-                                <h4 class="h4">Режим использования масок<br>и перчаток на территории магазинов</h4>
-                                <p class="text">Подробная информация о режимах<br>использования масок и перчаток на<br>территории магазинов "ЛЕНТА". Информация<br>обновляется каждый будний день.</p>
-                                <button class="more">Подробнее</button>
+                                <span class="article-card__date">05.03.2021</span>
+                                <h4 class="article-card__title">Режим использования масок<br>и перчаток на территории магазинов</h4>
+                                <p class="article-card__text">Подробная информация о режимах<br>использования масок и перчаток на<br>территории магазинов "ЛЕНТА". Информация<br>обновляется каждый будний день.</p>
+                                <button class="article-card__button">Подробнее</button>
                             </div>
                         </article>
                         <article class="article-card">
@@ -256,8 +257,8 @@
                 </nav>
 
                 <section class="main-catalog">
-                    <span class="main-head-text">Каталог</span>
-                    <div class="grid-container">
+                    <span class="catalog__title">Каталог</span>
+                    <div class="catalog__grid">
                         <a class="grid-element grid-large" href="#"><img src="IMAGES/grid.png" alt="Что-то"><span class="grid-element-text">Молоко, сыр, яйцо</span></a>
                         <a class="grid-element" href="#"><img src="IMAGES/grid2.png" alt="Что-то"><span class="grid-element-text">Хлеб</span></a>
                         <a class="grid-element" href="#"><img src="IMAGES/grid3.png" alt="Что-то"><span class="grid-element-text">Фрукты и овощи</span></a>
@@ -278,13 +279,13 @@
 
             <section  class="page page--product">
                 <div class="breadcrumbs">
-                    <a class='breadcrumbs__link' href="#">Главная</a>
+                    <a class='breadcrumbs__link breadcrumbs__link--current' href="#">Главная</a>
                     <span class="breadcrumbs__separator"><img src="IMAGES/chevron-right.png" alt="Что-то"></span>
-                    <a class="breadcrumbs__link" href="#">Каталог</a>
+                    <a class="breadcrumbs__link breadcrumbs__link--current" href="#">Каталог</a>
                     <span class="breadcrumbs__separator"><img src="IMAGES/chevron-right.png" alt="Что-то"></span>
-                    <a class="breadcrumbs__link" href="#">Молоко, сыр, яйцо</a>
+                    <a class="breadcrumbs__link breadcrumbs__link--current" href="#">Молоко, сыр, яйцо</a>
                     <span class="breadcrumbs__separator"><img src="IMAGES/chevron-right.png" alt="Что-то"></span>
-                    <a class="product-breadcrumbs__link" href="#">Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г</a>
+                    <a class="breadcrumbs__link breadcrumbs__link--current" href="#">Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г</a>
                 </div>
 
                 <section class="product">
@@ -323,11 +324,11 @@
 
                         <div class="product__purchase">
                             <div class="product__price">
-                                <div class="usually">
-                                    <span class="product__price">192,69 ₽</span>
+                                <div class="product__price-usual">
+                                    <span class="product__price-info">192,69 ₽</span>
                                     <span class="usually-text">Обычная цена</span>
                                 </div>
-                                <div class="discount">
+                                <div class="product__price-discount">
                                     <div class="discount-text-info">
                                         <span class="discount-price">108,99</span>
                                         <span class="discount-price">₽</span>
@@ -339,26 +340,26 @@
                                 </div>
                             </div>
 
-                                <button class="add-to-cart">
+                                <button class="product__add-to-cart">
                                     <img src="IMAGES/shopping-cart2.png" alt="cart-icon" class="cart-icon">
                                     <span class="add-to-cart-text">В корзину</span>
                                 </button>
-                                <div class="smail-bonus">
+                                <div class="product__bonus">
                                     <img src="IMAGES/smile.png" alt="smile">
-                                    <span class="smail-bonus-text">Вы получаете <span class="smail-bonus-text-bold">10 бонусов</span></span>
+                                    <span class="product__bonus-text">Вы получаете <span class="product__bonus-text--bold">10 бонусов</span></span>
                                 </div>
-                                <div class="Notify">
+                                <div class="product__notify">
                                     <img src="IMAGES/bell-off.png" alt="Notify">
-                                    <span class="Notify-text">Уведомить о снижении цены</span>
+                                    <span class="product__notify-text">Уведомить о снижении цены</span>
                                 </div>
 
-                            <div class="products-more-info">
+                            <div class="product__info-row">
                                 <div class="product__info-row-highlight">
                                     <span class="product__info-label">Бренд</span>
                                     <span class="product__info-value">ПРОСТОКВАШИНО</span>
                                 </div>
 
-                                <div class="product__info-row">
+                                <div class="product__info-row-nohiglights">
                                     <span class="product__info-label">Страна производителя</span>
                                     <span class="product__info-value">Россия</span>
                                 </div>
@@ -370,7 +371,7 @@
                             </div>
                         </div>
                         <div class="similar-products">
-                            <span class="similar-products__title">Похожие</span>
+                            <span class="product__similar-title">Похожие</span>
                             <img src="IMAGES/Item%20(20).png" alt="">
                             <img src="IMAGES/Item%20(21).png" alt="">
                             <img src="IMAGES/Item%20(22).png" alt="">
@@ -379,10 +380,333 @@
                     </div>
                 </section>
 
-                <section class="feedbacks">
+                <section class="products">
+                    <h2 class="section-title">С этим товаров покупают</h2>
+                    <div class="products__list">
+                        <article class="product__card">
+                            <img class='product-card__image' src="IMAGES/Item1.png" alt="Что-то">
+                            <button class="product-card__favorite">
+                                <img src="IMAGES/Button.png" alt="Что-то">
+                            </button>
+                            <button class="product-card__add-to-cart">
+                                В корзину
+                            </button>
+                        </article>
+                        <article class="product__card">
+                            <img class='product-card__image' src="IMAGES/Item2.png" alt="Что-то">
+                            <button class="product-card__favorite">
+                                <img src="IMAGES/Button.png" alt="Что-то">
+                            </button>
+                            <button class="product-card__add-to-cart">
+                                В корзину
+                            </button>
+                        </article>
+                        <article class="product__card">
+                            <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
+                            <button class="product-card__favorite">
+                                <img src="IMAGES/Button.png" alt="Что-то">
+                            </button>
+                            <button class="product-card__add-to-cart">
+                                В корзину
+                            </button>
+                        </article>
+                        <article class="product__card">
+                            <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
+                            <button class="product-card__favorite">
+                                <img src="IMAGES/Button.png" alt="Что-то">
+                            </button>
+                            <button class="product-card__add-to-cart">
+                                В корзину
+                            </button>
+                        </article>
 
+                    </div>
+                </section>
+
+                <section class="feedbacks">
+                    <h2 class="section-title">Отзывы</h2>
+                    <div class="reviews">
+                        <div class="reviews__summary">
+                            <div class="feedback-product__rating">
+                                <div class="feedback-product__rating-stars">
+                                    <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                </div>
+                                <span class="feedback-wrapper-text">4 из 5</span>
+                            </div>
+
+                            <div class="feedback-product__rating__group">
+                                <div class="feedback-product__rating">
+                                    <span class="stars">5</span>
+                                    <div class="stars">
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    </div>
+                                    <span class="feedback-product__number-right">1</span>
+                                </div>
+                                <div class="feedback-product__rating">
+                                    <span class="stars">4</span>
+                                    <div class="stars">
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    </div>
+                                    <span class="feedback-product__number-right">1</span>
+                                </div>
+                                <div class="feedback-product__rating">
+                                    <span class="stars">3</span>
+                                    <div class="stars">
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    </div>
+                                    <span class="feedback-product__number-right">0</span>
+                                </div>
+                                <div class="feedback-product__rating">
+                                    <span class="stars">2</span>
+                                    <div class="stars">
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    </div>
+                                    <span class="feedback-product__number-right">0</span>
+                                </div>
+                                <div class="feedback-product__rating">
+                                    <span class="stars">1</span>
+                                    <div class="stars">
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    </div>
+                                        <span class="feedback-product__number-right">1</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-feedback-product__with-name">
+                            <div class="feedback-product__with-name">
+                                <div class="user-name">
+                                    <img src="IMAGES/userIcon.png" alt="">
+                                    <span class="user-name__text">
+                                        Татьяна
+                                    </span>
+                                </div>
+                                <div class="feedback-product__rating">
+                                    <div class="stars">
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    </div>
+                                    <span class="feedback-date">22.02.2020</span>
+                                </div>
+                                <p class="feedback-text">
+                                    приятный вкус
+                                </p>
+                            </div>
+
+                            <div class="feedback-product__with-name">
+                                <div class="user-name">
+                                    <img src="IMAGES/userIcon.png" alt="">
+                                    <span class="user-name__text">
+                                        Мария
+                                    </span>
+                                </div>
+                                <div class="feedback-product__rating">
+                                    <div class="stars">
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    </div>
+                                    <span class="feedback-date">22.02.2020</span>
+                                </div>
+                                <p class="feedback-text">
+                                    Масло среднее, есть вкуснее                                </p>
+                            </div>
+
+                            <div class="feedback-product__with-name">
+                                <div class="user-name">
+                                    <img src="IMAGES/userIcon.png" alt="">
+                                    <span class="user-name__text">
+                                        Алексей
+                                    </span>
+                                </div>
+                                <div class="feedback-product__rating">
+                                    <div class="stars">
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__star" src="IMAGES/star.png" alt="star" >
+                                    </div>
+                                    <span class="feedback-date">22.02.2020</span>
+                                </div>
+                                <p class="feedback-text">
+                                    Покупали в том числе в этом весе. Масло по вкусу и органолептическим свойствам совершенно не похоже на натуральное. Упаковка выглядит как напечатанная на дешёвом принтере. На наш взгляд продукт является подделкой или контрафактной продукцией. Просим разобраться.
+                                </p>
+                            </div>
+
+                            <div class="block-feedback__place-your-rating">
+                                <div class="feedback-product__your-rating">
+                                    <span class="feedback-wrapper-your-rating">Ваша оценка</span>
+                                    <div class="feedback-product__your-rating-stars">
+                                        <img class="product__rating-star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__rating-star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__rating-star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__rating-star" src="IMAGES/star.png" alt="star" >
+                                        <img class="product__rating-star" src="IMAGES/star.png" alt="star" >
+                                    </div>
+                                </div>
+                                <textarea class="feedback-textarea" placeholder="Отзыв"></textarea>
+                                <button class="send-feedback">
+                                    Отправить отзыв
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="products products--sale">
+                    <h2 class='section-title'>Акции</h2>
+                    <div class="products__list">
+                        <article class="product__card">
+                            <img class='product-card__image' src="IMAGES/Item1.png" alt="Что-то">
+                            <button class="product-card__favorite">
+                                <img src="IMAGES/Button.png" alt="favorite">
+                            </button>
+                            <button class="product-card__add-to-cart">
+                                В корзину
+                            </button>
+                        </article>
+                        <article class="product__card">
+                            <img class='product-card__image' src="IMAGES/Item2.png" alt="Что-то">
+                            <button class="product-card__favorite">
+                                <img src="IMAGES/Button.png" alt="favorite">
+                            </button>
+                            <button class="product-card__add-to-cart">
+                                В корзину
+                            </button>
+                        </article>
+                        <article class="product__card">
+                            <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
+                            <button class="product-card__favorite">
+                                <img src="IMAGES/Button.png" alt="favorite">
+                            </button>
+                            <button class="product-card__add-to-cart">
+                                В корзину
+                            </button>
+                        </article>
+                        <article class="product__card">
+                            <img class='product-card__image' src="IMAGES/Item3.png" alt="Что-то">
+                            <button class="product-card__favorite">
+                                <img src="IMAGES/Button.png" alt="favorite">
+                            </button>
+                            <button class="product-card__add-to-cart">
+                                В корзину
+                            </button>
+                        </article>
+                    </div>
                 </section>
             </section >
+
+            <section class="page section-cart">
+                <div class="cart-head">
+                    <a class="text1">Главная</a>
+                    <img src="IMAGES/chevron-right.png" alt="" class="arrow">
+                    <p class="text2">Корзина</p>
+                </div>
+
+                <div class="cart__header">
+                    <h1 class="cart-title">Корзина</h1>
+                    <div class="cart__actions">
+                        <button class="cart__select"><img src="IMAGES/Checkbox%20(1).png" alt="" class="cart__select"></button>
+                        <button class="cart-select-all">Выделить всё</button>
+                        <button class="cart-delete-all">Удалить выбранные</button>
+                    </div>
+                </div>
+
+                <div class="cart_items">
+                    <div class="cart__item-promo">
+                        <div class="cart__image">
+                            <button class="cart__checkbox"><img src="IMAGES/Checkbox%20(2).png" alt="" class="cart-image__checkbox"></button>
+                            <img src="IMAGES/item222.png" alt="" class="cart-image__img">
+                        </div>
+                        <div class="cart-info">
+                            <h3 class="cart__item-title">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h3>
+                            <div class="cart-price">
+                                <div class="cartcart__with-card">
+                                    <div class="cart-price__with-card">
+                                        <p class="cart__price-value">44,50 </p>
+                                        <p class="cart__price-currency">₽</p>
+                                    </div>
+                                </div>
+                                <p class="cart__price-unit">за шт.</p>
+                            </div>
+                        </div>
+                        <div class="cart__quantity-wrapper">
+                            <div class="cart__quantity">
+                                <button class="cart__quantity-btn--minus"><img src="IMAGES/minus.png" alt="minus"></button>
+                                <p class="cart__quantity-number">2</p>
+                                <button class="cart__quantity-btn--plus"><img src="IMAGES/plus.png" alt="plus" ></button>
+                            </div>
+                            <div class="cart__sum-price">
+                                <p class="cart__sum-price-number">89,00</p><p class="cart__sum-price-currency">₽</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart__item-promo">
+                        <div class="cart__image">
+                            <button class="cart__checkbox"><img src="IMAGES/Checkbox%20(2).png" alt="" class="cart-image__checkbox"></button>
+                            <img src="IMAGES/item222.png" alt="" class="cart-image__img">
+                        </div>
+                        <div class="cart-info">
+                            <h3 class="cart__item-title">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h3>
+                            <div class="cart-price">
+                                <div class="cartcart__with-card">
+                                    <div class="cart-price__with-card">
+                                    <p class="cart__price-value">44,50 </p>
+                                    <p class="cart__price-currency">₽</p>
+                                    </div>
+                                    <p class="cart-price__with-card-text">С картой</p>
+                                </div>
+                                <p class="cart__price-unit">за шт.</p>
+                                <p class="cart-info__promo">-10%</p>
+                            </div>
+                        </div>
+                        <div class="cart__quantity-wrapper">
+                            <div class="cart__quantity">
+                                <button class="cart__quantity-btn--minus"><img src="IMAGES/minus.png" alt="minus"></button>
+                                <p class="cart__quantity-number">2</p>
+                                <button class="cart__quantity-btn--plus"><img src="IMAGES/plus.png" alt="plus" ></button>
+                            </div>
+                            <div class="cart__sum-price">
+                                <p class="cart__sum-price-number">89,00</p><p class="cart__sum-price-currency">₽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
             <!---->
         </div>
     </main>
