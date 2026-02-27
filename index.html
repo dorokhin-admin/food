@@ -627,15 +627,18 @@
                 </section>
             </section >
 
-            <section class="page section-cart">
+            <section class="page page--cart">
                 <div class="cart-head">
-                    <a class="text1">Главная</a>
+                    <a class="cart-head__main">Главная</a>
                     <img src="IMAGES/chevron-right.png" alt="" class="arrow">
-                    <p class="text2">Корзина</p>
+                        <p class="cart-head__cart--text">Корзина</p>
                 </div>
 
                 <div class="cart__header">
-                    <h1 class="cart-title">Корзина</h1>
+                    <div class="cart-head__cart">
+                        <h1 class="cart-title">Корзина</h1>
+                        <p class="cart-head__cart-wrapper">3</p>
+                    </div>
                     <div class="cart__actions">
                         <button class="cart__select"><img src="IMAGES/Checkbox%20(1).png" alt="" class="cart__select"></button>
                         <button class="cart-select-all">Выделить всё</button>
@@ -772,6 +775,104 @@
                             </div>
                         </div>
                     </div>
+                    <div class="making-order">
+                        <div class="making-order__bonus-toggle">
+                            <img src="IMAGES/Toggle.png" alt="" class="making-order__toggle">
+                            <p class="making-order__writeoff">Списать 200 ₽ </p>
+                        </div>
+                        <p class="making-order__accumulated">На карте накоплено 200 ₽</p>
+                        <div class="making-order__summary">
+                            <div class="making-order__summary-left">
+                                <p class="making-order__quantity">3 товара</p>
+                                <p class="making-order__discount-label">Скидка</p>
+                            </div>
+                            <div class="making-order__summary-right">
+                                <p class="making-order__sum-items">258,10 ₽</p>
+                                <p class="making-order__discount">-8,01 ₽</p>
+                            </div>
+                        </div>
+                        <div class="making-order__total">
+                            <p class="making-order__total--result">Итог</p>
+                            <p class="making-order__total--priсe">250,09 ₽ </p>
+                        </div>
+                        <div class="making-order__bonus">
+                            <img src="IMAGES/smile.png" alt="smile">
+                            <span class="making-order__bonus-text">Вы получаете <span class="product__bonus-text--bold">100 бонусов</span></span>
+                        </div>
+                        <p class="making-order__min-limit">Минимальная сумма заказа 1000р</p>
+                        <button class="making-order__button">Оформить заказ</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page page--delivery">
+                <div class="cart-head">
+                    <a class="cart-head__main">Главная</a>
+                    <img src="IMAGES/chevron-right.png" alt="" class="arrow">
+                    <p class="cart-head__cart--text">Корзина</p>
+                </div>
+
+                <div class="cart__header">
+                    <div class="cart-head__cart">
+                        <h1 class="cart-title">Доставка</h1>
+                        <p class="cart-head__cart-wrapper">3</p>
+                    </div>
+                </div>
+
+                <div class="block-cart">
+                    <form action="" class="delivery">
+                        <h1 class="delivery__title">Куда</h1>
+                        <div class="delivery__fields">
+                            <div class="delivery__field">
+                                <p class="delivery__label">Населенный пункт</p>
+                                <button class="delivery__city">
+                                    <p>Усть-Ижма</p>
+                                    <img src="IMAGES/chevron-down.png" alt=""></button>
+                            </div>
+                            <div class="delivery__field">
+                                <p class="delivery__label">Улица</p>
+                                <textarea class='delivery__input' name="delivery__input" id="1" cols="20" rows="1"></textarea>
+                            </div>
+                            <div class="delivery__field">
+                                <p class="delivery__label">Дом</p>
+                                <textarea class='delivery__input' name="delivery__input" id="2" cols="3" rows="1"></textarea>
+                            </div>
+                            <div class="delivery__field">
+                                <p class="delivery__label">Квартира</p>
+                                <textarea class='delivery__input' name="delivery__input" id="3" cols="4" rows="1"></textarea>
+                            </div>
+                            <div class="delivery__field">
+                                <p class="delivery__label">Дополнительно</p>
+                                <textarea class='delivery__input' name="delivery__input" id="4" cols="10" rows="1"></textarea>
+                            </div>
+                        </div>
+
+                        <h1 class="delivery__title">Когда</h1>
+                        <div class="delivery__fields">
+                            <div class="delivery__field">
+                                <p class="delivery__label">Дата</p>
+                                <button class="delivery__date">
+                                    <p>20.02.2021</p>
+                                    <img src="IMAGES/chevron-down.png" alt=""></button>
+                            </div>
+                            <div class="delivery__field">
+                                <p class="delivery__label">Время</p>
+                                <div class="delivery__time">
+                                    <button class='delivery__time--transparent'>8:00 - 14:00</button>
+                                    <button class='delivery__time--green'>14:00 - 18:00</button>
+                                    <button class='delivery__time--block'>18:00 - 20:00</button>
+                                    <button class='delivery__time--block'>20:00 - 22:00</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h1 class="delivery__title">Вход</h1>
+                        <div class="delivery__fields">
+                            <div class="delivery__field">
+                                <textarea class='delivery__input' name="delivery__input" id="5" cols="10" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </form>
                     <div class="making-order">
                         <div class="making-order__bonus-toggle">
                             <img src="IMAGES/Toggle.png" alt="" class="making-order__toggle">

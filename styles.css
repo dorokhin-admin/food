@@ -352,7 +352,8 @@ header{
     white-space: nowrap;
 }
 
-.product-breadcrumbs__link{
+.product-breadcrumbs__link,
+.delivery__label{
     color: #8F8F8F;
 }
 
@@ -480,7 +481,6 @@ header{
     display: flex;
     justify-content: center;
     gap: 16px;
-    margin: 8px 0;
     color: #70C05B;
 }
 
@@ -632,14 +632,28 @@ header{
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-top: 24px;
 }
 
-.text2{
-    color: #8F8F8F;
+.cart-head__cart{
+    display: flex;
+    gap: 10px;
+    width: 324px;
+    height: 96px;
+    margin-bottom: 60px;
+}
+
+
+
+.cart-head__cart-wrapper{
+    padding: 4px 8px;
+    height: 32px;
+    color: white;
+    background-color: #FF6633;
+    border-radius: 4px;
 }
 
 .cart-title{
-    margin-top: 24px;
     font-weight: bold;
     font-size: 64px;
     margin-bottom: 60px;
@@ -811,6 +825,7 @@ header{
 .making-order__bonus-toggle{
     display: flex;
     margin-bottom: 20px;
+    align-items: center;
 }
 .making-order__accumulated{
     color: #8F8F8F;
@@ -828,7 +843,8 @@ header{
     gap: 10px;
 }
 .making-order__summary-left,
-.making-order__total--result{
+.making-order__total--result,
+.cart-head__cart--text{
     color: #8F8F8F;
 }
 .making-order__discount{
@@ -873,6 +889,72 @@ header{
     display: flex;
     gap: 40px;
 }
+/*delivery*/
+
+.delivery__title{
+    font-size: 36px;
+}
+
+.delivery__fields{
+    display: flex;
+    margin-top: 24px;
+    gap: 40px;
+}
+
+.delivery__field{
+    margin-bottom: 24px;
+}
+
+.delivery__city,
+.delivery__date{
+    display: flex;
+    width: 245px;
+    padding: 8px 8px 8px 16px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    transition: box-shadow 0.8s ease;
+    box-shadow: 0 8px 16px rgba(255, 102, 51, 0.2);
+}
+.delivery__city p{
+    width: 193px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.delivery__input{
+    height: 40px;
+    border: none;
+    resize: none;
+    border-radius: 4px;
+}
+
+.delivery__time{
+    display: flex;
+    gap: 8px;
+    border-radius: 4px;
+}
+
+.delivery__time--transparent,
+.delivery__time--green,
+.delivery__time--block{
+    background: none;
+    display: flex;
+    justify-content: center;
+    width: 169px;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+}
+.delivery__time--green{
+    color: white;
+    background-color: #70C05B;
+}
+
+.delivery__time--block{
+    background-color: white;
+    color: #BFBFBF;
+}
 
 /*none*/
 .page--catalog{
@@ -884,6 +966,11 @@ header{
 }
 /*--------------------------------*/
 .page--product{
+    display: none;
+}
+
+
+.page--cart{
     display: none;
 }
 /*none*/
