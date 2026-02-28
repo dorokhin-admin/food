@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <title>Orders page</title>
+    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class='header__inner'>
+            <img class='header__logo-icon' src="IMAGES/Group.png" alt="header__logo-iconо">
+            <h1 class="header__logo-text">СЕВЕРЯНОЧКА</h1>
+            <div class='header__controls'>
+                <button class='catalog'>
+                    <img src="IMAGES/menu.png">
+                    Каталог
+                </button>
+                <div class='header__search'>
+                    <input class='header__search-input' type="text" placeholder=" Найти товар">
+                    <img src="IMAGES/search.png" alt="header__search-input">
+                </div>
+            </div>
+            <div class='header__nav'>
+                <a class='header__link header__link--favorite' href="#">
+                    <img class='heart' src='IMAGES/heart.png' alt="header__link--favorite">
+                    <span class='header__link-text'>Избранное</span>
+                </a>
+
+                <a class='header__link header__link--orders' href="#">
+                    <img class='orderImg' src='IMAGES/Frame%20211%20(3).png' alt="header__link--orders">
+                    <span class='header__link-text'>Заказы</span>
+                </a>
+
+                <a class='header__link header__link--cart' href="#">
+                    <img src='IMAGES/shopping-cart.png'alt="header__link--cart">
+                    <span class='header__link-text'>Корзина</span>
+                </a>
+
+
+                <a class='header__profile' href="#">
+                    <img src="IMAGES/avatar.png" alt="Что-то">
+                    <span class="header__profile-name">Алексей</span>
+                    <img src='IMAGES/chevron-down.png' alt="Что-то">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class='hero'>
+        <img class="hero__image" src='IMAGES/Sliders.png' alt="Что-то">
+        <span class="hero__caption">Доставка бесплатно от 1000 ₽</span>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <section class="page page--orders">
+            <div class="cart-head">
+                <a class="cart-head__main">Главная</a>
+                <img src="IMAGES/chevron-right.png" alt="" class="arrow">
+                <p class="cart-head__cart--text">Корзина</p>
+            </div>
+
+            <div class="cart__header">
+                <div class="cart-head__cart">
+                    <h1 class="cart-title">Заказы</h1>
+                    <p class="cart-head__cart-wrapper">30</p>
+                </div>
+                <div class="cart__header-calendar">
+                    <button class="cart__date-choise"><img src="IMAGES/Button%20(3).png" alt="calendar"></button>
+                    <button class="cart__date--now">
+                        <p class="cart__date-text">Сегодня</p>
+                        <p class="cart__date-quantity">10</p></button>
+                    <button class="cart__date--next">
+                        <p class="cart__date-text">1 апреля</p>
+                        <p class="cart__date-quantity">2</p></button>
+                    <button class="cart__date--next">
+                        <p class="cart__date-text">5 апреля</p>
+                        <p class="cart__date-quantity">1</p></button>
+                </div>
+            </div>
+
+            <div class="orders">
+                <div class="order">
+                    <div class="order__time">
+                        <img src="IMAGES/Frame%20211%20(2).png" alt="time" class="order__time-img">
+                        <h1 class="order__time-title">11:00</h1>
+                    </div>
+                    <div class="order__district">
+                        <button class="order__district-first">
+                            <p class="cart__date-text">Усть-Ижма</p>
+                            <p class="cart__date-quantity">3</p></button>
+                        <button class="order__district-next">
+                            <p class="cart__date-text">Галово</p>
+                            <p class="cart__date-quantity">2</p></button>
+                    </div>
+                    <div class="order-items">
+                        <div class="order__item">
+                            <h1 class="order__item-value">222</h1>
+                            <div class="order__item-deliveryman">
+                                <img src="IMAGES/avatar.png" alt="avatar">
+                                <p class="">Дмитрий</p>
+                            </div>
+                            <div class="order__item-telephone">
+                                <img src="IMAGES/phone.png" alt="phone" class="">
+                                <p class="order__item-contact">+79128883443</p>
+                            </div>
+                            <button class="order__item-confirmed">
+                                <img src="IMAGES/check-circle.png" alt="check">
+                                <p class="order__item-confirmed-text">Подтвержден</p>
+                                <img src="IMAGES/chevron-down.png" alt="down">
+                            </button>
+                            <button class="order__item-check">
+                                <img src="IMAGES/eye.png" alt="shape">
+                                <p class="order__item-status-text">Просмотреть заказ</p>
+                            </button>
+                            <button class="order__item-chat"><img src="IMAGES/Button%20(4).png" alt="chat"></button>
+                        </div>
+                        <div class="order__item">
+                            <h1 class="order__item-value">222</h1>
+                            <div class="order__item-deliveryman">
+                                <img src="IMAGES/avatar.png" alt="avatar">
+                                <p class="">Дмитрий</p>
+                            </div>
+                            <div class="order__item-telephone">
+                                <img src="IMAGES/phone.png" alt="phone" class="">
+                                <p class="order__item-contact">+79128883443</p>
+                            </div>
+                            <button class="order__item-confirmed">
+                                <img src="IMAGES/check-circle.png" alt="check">
+                                <p class="order__item-confirmed-text">Подтвержден</p>
+                                <img src="IMAGES/chevron-down.png" alt="down">
+                            </button>
+                            <button class="order__item-check">
+                                <img src="IMAGES/eye.png" alt="shape">
+                                <p class="order__item-status-text">Просмотреть заказ</p>
+                            </button>
+                            <button class="order__item-chat"><img src="IMAGES/Button%20(4).png" alt="chat"></button>
+                        </div>
+                        <div class="order__item">
+                            <h1 class="order__item-value">222</h1>
+                            <div class="order__item-deliveryman">
+                                <img src="IMAGES/avatar.png" alt="avatar">
+                                <p class="">Дмитрий</p>
+                            </div>
+                            <div class="order__item-telephone">
+                                <img src="IMAGES/phone.png" alt="phone" class="">
+                                <p class="order__item-contact">+79128883443</p>
+                            </div>
+                            <button class="order__item-refund">
+                                <img src="IMAGES/alert-triangle.png" alt="check">
+                                <p class="order__item-refund-text">Возврат</p>
+                                <img src="IMAGES/chevron-down.png" alt="down">
+                            </button>
+                            <button class="order__item-check">
+                                <img src="IMAGES/eye.png" alt="shape">
+                                <p class="order__item-status-text">Просмотреть заказ</p>
+                            </button>
+                            <button class="order__item-chat"><img src="IMAGES/Button%20(4).png" alt="chat"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="order__time">
+                        <img src="IMAGES/Frame%20211%20(2).png" alt="time" class="order__time-img">
+                        <h1 class="order__time-title">14:00</h1>
+                    </div>
+                    <div class="order__district">
+                        <button class="order__district-first">
+                            <p class="cart__date-text">Усть-Ижма</p>
+                            <p class="cart__date-quantity">3</p></button>
+                        <button class="order__district-next">
+                            <p class="cart__date-text">Галово</p>
+                            <p class="cart__date-quantity">2</p></button>
+                    </div>
+                    <div class="order-items">
+                        <div class="order__item">
+                            <h1 class="order__item-value">222</h1>
+                            <div class="order__item-deliveryman">
+                                <img src="IMAGES/avatar.png" alt="avatar">
+                                <p class="">Дмитрий</p>
+                            </div>
+                            <div class="order__item-telephone">
+                                <img src="IMAGES/phone.png" alt="phone" class="">
+                                <p class="order__item-contact">+79128883443</p>
+                            </div>
+                            <button class="order__item-confirmed">
+                                <img src="IMAGES/check-circle.png" alt="check">
+                                <p class="order__item-confirmed-text">Подтвержден</p>
+                                <img src="IMAGES/chevron-down.png" alt="down">
+                            </button>
+                            <button class="order__item-check">
+                                <img src="IMAGES/eye.png" alt="shape">
+                                <p class="order__item-status-text">Просмотреть заказ</p>
+                            </button>
+                            <button class="order__item-chat"><img src="IMAGES/Button%20(4).png" alt="chat"></button>
+                        </div>
+                        <div class="order__item">
+                            <h1 class="order__item-value">222</h1>
+                            <div class="order__item-deliveryman">
+                                <img src="IMAGES/avatar.png" alt="avatar">
+                                <p class="">Дмитрий</p>
+                            </div>
+                            <div class="order__item-telephone">
+                                <img src="IMAGES/phone.png" alt="phone" class="">
+                                <p class="order__item-contact">+79128883443</p>
+                            </div>
+                            <button class="order__item-confirmed">
+                                <img src="IMAGES/check-circle.png" alt="check">
+                                <p class="order__item-confirmed-text">Подтвержден</p>
+                                <img src="IMAGES/chevron-down.png" alt="down">
+                            </button>
+                            <button class="order__item-check">
+                                <img src="IMAGES/eye.png" alt="shape">
+                                <p class="order__item-status-text">Просмотреть заказ</p>
+                            </button>
+                            <button class="order__item-chat"><img src="IMAGES/Button%20(4).png" alt="chat"></button>
+                        </div>
+                        <div class="order__item">
+                            <h1 class="order__item-value">222</h1>
+                            <div class="order__item-deliveryman">
+                                <img src="IMAGES/avatar.png" alt="avatar">
+                                <p class="">Дмитрий</p>
+                            </div>
+                            <div class="order__item-telephone">
+                                <img src="IMAGES/phone.png" alt="phone" class="">
+                                <p class="order__item-contact">+79128883443</p>
+                            </div>
+                            <button class="order__item-refund">
+                                <img src="IMAGES/alert-triangle.png" alt="check">
+                                <p class="order__item-refund-text">Возврат</p>
+                                <img src="IMAGES/chevron-down.png" alt="down">
+                            </button>
+                            <button class="order__item-check">
+                                <img src="IMAGES/eye.png" alt="shape">
+                                <p class="order__item-status-text">Просмотреть заказ</p>
+                            </button>
+                            <button class="order__item-chat"><img src="IMAGES/Button%20(4).png" alt="chat"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="order">
+                    <div class="order__time">
+                        <img src="IMAGES/Frame%20211%20(2).png" alt="time" class="order__time-img">
+                        <h1 class="order__time-title">18:00</h1>
+                    </div>
+                    <div class="order__district">
+                        <button class="order__district-first">
+                            <p class="cart__date-text">Усть-Ижма</p>
+                            <p class="cart__date-quantity">3</p></button>
+                        <button class="order__district-next">
+                            <p class="cart__date-text">Галово</p>
+                            <p class="cart__date-quantity">2</p></button>
+                    </div>
+                    <div class="order-items">
+                        <div class="order__item">
+                            <h1 class="order__item-value">222</h1>
+                            <div class="order__item-deliveryman">
+                                <img src="IMAGES/avatar.png" alt="avatar">
+                                <p class="">Дмитрий</p>
+                            </div>
+                            <div class="order__item-telephone">
+                                <img src="IMAGES/phone.png" alt="phone" class="">
+                                <p class="order__item-contact">+79128883443</p>
+                            </div>
+                            <button class="order__item-confirmed">
+                                <img src="IMAGES/check-circle.png" alt="check">
+                                <p class="order__item-confirmed-text">Подтвержден</p>
+                                <img src="IMAGES/chevron-down.png" alt="down">
+                            </button>
+                            <button class="order__item-check">
+                                <img src="IMAGES/eye.png" alt="shape">
+                                <p class="order__item-status-text">Просмотреть заказ</p>
+                            </button>
+                            <button class="order__item-chat"><img src="IMAGES/Button%20(4).png" alt="chat"></button>
+                        </div>
+                        <div class="order__item">
+                            <h1 class="order__item-value">222</h1>
+                            <div class="order__item-deliveryman">
+                                <img src="IMAGES/avatar.png" alt="avatar">
+                                <p class="">Дмитрий</p>
+                            </div>
+                            <div class="order__item-telephone">
+                                <img src="IMAGES/phone.png" alt="phone" class="">
+                                <p class="order__item-contact">+79128883443</p>
+                            </div>
+                            <button class="order__item-confirmed">
+                                <img src="IMAGES/check-circle.png" alt="check">
+                                <p class="order__item-confirmed-text">Подтвержден</p>
+                                <img src="IMAGES/chevron-down.png" alt="down">
+                            </button>
+                            <button class="order__item-check">
+                                <img src="IMAGES/eye.png" alt="shape">
+                                <p class="order__item-status-text">Просмотреть заказ</p>
+                            </button>
+                            <button class="order__item-chat"><img src="IMAGES/Button%20(4).png" alt="chat"></button>
+                        </div>
+                        <div class="order__item">
+                            <h1 class="order__item-value">222</h1>
+                            <div class="order__item-deliveryman">
+                                <img src="IMAGES/avatar.png" alt="avatar">
+                                <p class="">Дмитрий</p>
+                            </div>
+                            <div class="order__item-telephone">
+                                <img src="IMAGES/phone.png" alt="phone" class="">
+                                <p class="order__item-contact">+79128883443</p>
+                            </div>
+                            <button class="order__item-new">
+                                <img src="IMAGES/bag.png" alt="bag">
+                                <p class="order__item-new-text">Новый</p>
+                                <img src="IMAGES/chevron-down.png" alt="down">
+                            </button>
+                            <button class="order__item-upload">
+                                <img src="IMAGES/upload.png" alt="upload">
+                                <p class="order__item-status-text">Выгрузить в 1с</p>
+                            </button>
+                            <button class="order__item-chat"><img src="IMAGES/Button%20(4).png" alt="chat"></button>
+                        </div>
+                    </div>
+                    <div class="order__products">
+                        <div class="order__product">
+                            <article class="product-card">
+                                <img class='product-card__image' src="IMAGES/image.png" alt="product">
+                                <button class="product-card__cart">
+                                    <img src="IMAGES/shopping-cart.png" alt="cart">
+                                    <p class="product-card__cart-counter">4</p>
+                                </button>
+                                <button class="product-card__warehouse">
+                                    <img src="IMAGES/box1.png" alt="box1">
+                                    <p class="product-card__warehouse-counter">40</p>
+                                </button>
+                            </article>
+                            <div class="order__product-description">
+                                <p class="order__product-name">Снеки</p>
+                                <p class="order__product-about">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+                            </div>
+                        </div>
+                        <div class="order__product">
+                            <article class="product-card">
+                                <img class='product-card__image' src="IMAGES/image.png" alt="product">
+                                <button class="product-card__cart">
+                                    <img src="IMAGES/shopping-cart.png" alt="cart">
+                                    <p class="product-card__cart-counter">4</p>
+                                </button>
+                                <button class="product-card__warehouse">
+                                    <img src="IMAGES/box1.png" alt="box1">
+                                    <p class="product-card__warehouse-counter">40</p>
+                                </button>
+                            </article>
+                            <div class="order__product-description">
+                                <p class="order__product-name">Снеки</p>
+                                <p class="order__product-about">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+                            </div>
+                        </div>
+                        <div class="order__product">
+                            <article class="product-card">
+                                <img class='product-card__image' src="IMAGES/image.png" alt="product">
+                                <button class="product-card__cart">
+                                    <img src="IMAGES/shopping-cart.png" alt="cart">
+                                    <p class="product-card__cart-counter">4</p>
+                                </button>
+                                <button class="product-card__warehouse">
+                                    <img src="IMAGES/box1.png" alt="box1">
+                                    <p class="product-card__warehouse-counter">40</p>
+                                </button>
+                            </article>
+                            <div class="order__product-description">
+                                <p class="order__product-name">Снеки</p>
+                                <p class="order__product-about">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+                            </div>
+                        </div>
+                        <div class="order__product">
+                            <article class="product-card">
+                                <img class='product-card__image' src="IMAGES/image.png" alt="product">
+                                <button class="product-card__cart">
+                                    <img src="IMAGES/shopping-cart.png" alt="cart">
+                                    <p class="product-card__cart-counter">4</p>
+                                </button>
+                                <button class="product-card__warehouse">
+                                    <img src="IMAGES/box1.png" alt="box1">
+                                    <p class="product-card__warehouse-counter">40</p>
+                                </button>
+                            </article>
+                            <div class="order__product-description">
+                                <p class="order__product-name">Снеки</p>
+                                <p class="order__product-about">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__item-check-center">
+                        <button class="order__item-check">
+                            <img src="IMAGES/eye.png" alt="shape">
+                            <p class="order__item-status-text">Просмотреть заказ</p>
+                        </button>
+                    </div>
+                </div>
+        </section>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="IMAGES/logo.png" alt="" class="logo">
+            </div>
+            <ul class="footer-list">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Политика обработки персональных данных</a></li>
+            </ul>
+            <div class="social">
+                <div class="inst">
+                    <img src="IMAGES/instagram.png" alt="">
+                </div>
+                <div class="vk">
+                    <img src="IMAGES/vkontakte.png" alt="">
+                </div>
+                <div class="facebook">
+                    <img src="IMAGES/facebook.png" alt="">
+                </div>
+                <div class="odnoklassnig">
+                    <img src="IMAGES/ok.png" alt="">
+                </div>
+                <div class="telephone">
+                    <img src="IMAGES/telephone.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

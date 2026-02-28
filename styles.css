@@ -13,14 +13,24 @@ body{
 .container{
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px; /* чтобы не прилипало к краям на маленьком экране */
+    padding: 0 20px;
 }
 
 a{
     text-decoration: none;
-    color: inherit;/*наследует с родителя(ближайшего див)*/
+    color: inherit;
 }
 
+button{
+    border: none;
+    background: none;
+    border-radius: 4px;
+}
+
+.input{
+    border: none;
+    background: none;
+}
 
 /*-------------------- Header --------------------*/
 header{
@@ -55,9 +65,7 @@ header{
     gap: 23px;
     background-color: #70C05B;
     color: white;
-    border: none;
     padding: 8px;
-    border-radius: 4px;
     width: 140px;
     cursor: pointer;
 }
@@ -70,9 +78,9 @@ header{
 }
 
 .header__search input {
-    border: none;
     outline: none;
     background: none;
+    border: none;
     width: 375px;
 }
 
@@ -84,7 +92,6 @@ header{
 .header__link--favorite,
 .header__link--orders,
 .header__link--cart{
-    border: none;
     background: none;
     display: flex;
     flex-direction: column;
@@ -92,13 +99,24 @@ header{
     gap: 8px;
      padding: 8px 12px;
     cursor: pointer;
+    position: relative;
+}
+
+.header__link-counter{
+    position: absolute;
+    right: 30px;
+    top: 0;
+    padding: 0 4px 0 4px;
+    border-radius: 4px;
+    background-color: #FF6633;
+    color: white;
+    font-size: 10px;
 }
 
 .header__profile{
     display: flex;
     align-items: center;
     background: none;
-    border: none;
     gap: 10px;
 }
 
@@ -115,7 +133,7 @@ header{
 .hero__image{
     width: 100%;
     height: 100%;
-    object-fit: cover;/* без этого будет картинка внутри сжиматься */
+    object-fit: cover;
 }
 
 .hero__caption{
@@ -156,7 +174,7 @@ header{
 
 .product__card {
     flex-basis: 272px;
-    box-sizing: border-box; /* учитывает padding и border */
+    box-sizing: border-box;
     height: 349px;
     white-space: nowrap;
     position: relative;
@@ -165,10 +183,9 @@ header{
 
 .product-card__favorite{
     position: absolute;
-    top: 8px;      /* отступ сверху */
-    right: 8px;
-    border: none;
-    width: 32px;    /* размер кнопки */
+    top: 8px;
+    right: 5px;
+    width: 32px;
     height: 32px;
     padding: 0;
     cursor: pointer;
@@ -180,7 +197,8 @@ header{
     display: block;
 }
 
-.product-card__add-to-cart{
+.product-card__add-to-cart,
+.product-card__added-to-cart{
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -188,12 +206,22 @@ header{
     display: block;
     font-size: 16px;
     white-space: nowrap;
-    border-radius: 4px;
     color: #70C05B;
     padding: 2px 70px;
     background: none;
     border: solid 1px #70C05B;
 }
+
+.product-card__added-to-cart{
+    display: none;
+    background-color: #FF6633;
+    color: white;
+}
+
+.product-card__added-to-cart.active{
+    display: block;
+}
+
 
 /*promotions*/
 .special-stocks{
@@ -213,15 +241,22 @@ header{
     left: 40px;
 }
 
-.stores__controls{
-    margin: 40px 0;
+.home__stores-controls{
+    margin: 40px 0 24px 0;
+    display: flex;
+    align-items: center;
+}
+
+.stores__button-selected,
+.stores__button{
+    color: white;
+    padding: 8px 16px;
+    background-color: #70C05B;
 }
 
 .stores__button{
+    background: none;
     color: #606060;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
 }
 
 /*articles*/
@@ -262,8 +297,6 @@ header{
 
 .article-card__button{
     color: white;
-    border: none;
-    border-radius: 4px;
     padding: 12px 40px;
     background-color: #70C05B;
 }
@@ -300,7 +333,7 @@ header{
 
 .grid-element{
     position: relative;
-    overflow: hidden; /* чтобы псевдоэлементы не вылезали */
+    overflow: hidden;
 }
 
 .grid-element::after,
@@ -314,17 +347,18 @@ header{
 .grid-element::before{
     background: linear-gradient(to top, rgba(112,192,91,1) 0%, rgba(0,0,0,0) 60%) ;
     opacity: 1;
+    transition: opacity 1s ease;
 }
 
 .grid-element::after {
     background: linear-gradient(to top, rgba(255,102,51,1) 0%, rgba(0,0,0,0) 60%);
-    opacity: 0; /* изначально невидимый оранжевый градиент */
+    opacity: 0;
     transition: opacity 2s ease;
 
 }
 
 .grid-element:hover::before {
-    opacity: 0; /* скрываем зелёный */
+    opacity: 0;
 }
 
 .grid-element:hover::after{
@@ -384,7 +418,7 @@ header{
 }
 
 .product__star{
-    width: 16px;   /* или 20px */
+    width: 16px;
     height: 16px;
 }
 
@@ -446,31 +480,29 @@ header{
 .discount-price{
     font-size: 36px;
     font-weight: bold;
-    line-height: 1;           /* важно: убрать лишние отступы */
+    line-height: 1;
 }
 
 .product__add-to-cart{
-    position: relative;       /* нужно для абсолютного позиционирования текста */
+    position: relative;
     margin-top: 16px;
     width: 100%;
     display: flex;
     align-items: center;
     padding: 16px;
-    border-radius: 4px;
-    border: none;
     background-color: #FF6633;
     color: white;
     font-size: 24px;
 }
 
 .product__add-to-cart img {
-    margin-left: 16px;        /* отступ от левого края */
-    z-index: 2;               /* чтобы была выше фона */
+    margin-left: 16px;
+    z-index: 2;
 }
 
 .product__add-to-cart span {
     position: absolute;
-    left: 50%;                /* центрируем по горизонтали */
+    left: 50%;
     transform: translateX(-50%);
     z-index: 2;
 
@@ -555,7 +587,7 @@ header{
    font-weight: bold;
     font-size: 18px;
     padding-left: 16px;
-    white-space: nowrap;   /* ВОТ ЭТО нужно */
+    white-space: nowrap;
 }
 
 .stars{
@@ -622,8 +654,6 @@ header{
     margin-top: 16px;
     color: #FF6633;
     background-color: #FCD5BA;
-    border: none;
-    border-radius: 4px;
     padding: 10px 30px;
 }
 /*section-cart*/
@@ -632,7 +662,11 @@ header{
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-top: 24px;
+    margin: 24px 0;
+}
+
+.cart__header{
+    margin-bottom: 60px;
 }
 
 .cart-head__cart{
@@ -640,17 +674,46 @@ header{
     gap: 10px;
     width: 324px;
     height: 96px;
-    margin-bottom: 60px;
+}
+
+.cart__header-calendar{
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
 }
 
 
+.cart__date--now,
+.cart__date--next{
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+    background-color: #70C05B;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.cart__date--next{
+    background: none;
+    color: #606060;
+}
+
+.cart__date-quantity{
+    font-size: 16px;
+    background-color: #FF6633;
+    padding: 4px 8px;
+    color: white;
+}
 
 .cart-head__cart-wrapper{
     padding: 4px 8px;
     height: 32px;
     color: white;
     background-color: #FF6633;
-    border-radius: 4px;
 }
 
 .cart-title{
@@ -667,13 +730,11 @@ header{
 
 .cart-select-all{
     margin-left: 8px;
-    border: none;
     background: none;
 }
 
 .cart-delete-all{
     margin-left: 40px;
-    border: none;
     background: none;
     color: #FF6633;
 }
@@ -685,7 +746,6 @@ header{
     width: 876px;
     display: flex;
     align-items: center;
-    border-radius: 4px;
     padding: 10px 0;
 }
 
@@ -710,14 +770,8 @@ header{
     top: -18px;
     left: 8px;
     background: none;
-    border: none;
 }
 
-.cart__select,
-.cart-item__checkbox{
-    background: none;
-    border: none;
-}
 
 .cart-item__info{
     padding: 0 0 8px 8px;
@@ -755,7 +809,6 @@ header{
     background-color: #70C05B;
     display: flex;
     align-items: center;
-    border-radius: 4px;
     margin-right: 16px;
 }
 
@@ -765,7 +818,6 @@ header{
     width: 100%;
     height: 100%;
     background-color: #70C05B;
-    border: none;
 }
 
 .cart__quantity-number{
@@ -792,7 +844,6 @@ header{
     background: white;
     width: 876px;
     display: flex;
-    border-radius: 4px;
     padding: 10px 0;
     transition: box-shadow 0.8s ease;
 }
@@ -805,7 +856,6 @@ header{
     padding: 4px 8px;
     color: white;
     background-color: #FF6633;
-    border-radius: 4px;
 }
 
 .cart-item__title{
@@ -820,7 +870,7 @@ header{
 .making-order{
     width: 272px;
     height: 470px;
-    padding: 25px 0 0 0;
+    padding: 35px 0 0 0;
 }
 .making-order__bonus-toggle{
     display: flex;
@@ -870,21 +920,36 @@ header{
     padding: 3px 8px;
     background-color: #D80000;
     color: white;
-    border-radius: 4px;
     font-size: 12px;
     width: 210px;
     margin-top: 24px;
     margin-bottom: 16px;
 }
-.making-order__button{
+.making-order__button,
+.making-order__pay--online,
+.making-order__pay--offline{
     color: #FF6633;
     background-color: #FCD5BA;
-    border: none;
-    border-radius: 4px;
     width: 272px;
     height: 60px;
     font-size: 24px;
 }
+
+.making-order__pay--online{
+    margin-top: 24px;
+    margin-bottom: 16px;
+    background-color: #FF6633;
+    color: white;
+}
+
+.making-order__pay--offline{
+    background-color: #70C05B;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+}
+
+
 .block-cart{
     display: flex;
     gap: 40px;
@@ -899,9 +964,11 @@ header{
     display: flex;
     margin-top: 24px;
     gap: 40px;
+    align-items: center;
 }
 
-.delivery__field{
+.delivery__field,
+.delivery__field-footer{
     margin-bottom: 24px;
 }
 
@@ -911,28 +978,39 @@ header{
     width: 245px;
     padding: 8px 8px 8px 16px;
     background-color: white;
-    border: none;
-    border-radius: 4px;
     transition: box-shadow 0.8s ease;
-    box-shadow: 0 8px 16px rgba(255, 102, 51, 0.2);
+    box-shadow: 0 8px 16px rgba(80, 80, 80, 0.2);
 }
-.delivery__city p{
+.delivery__date{
+    width: 155px;
+    display: flex;
+}
+
+
+.delivery__city p,
+.delivery__date p{
     width: 193px;
     display: flex;
     justify-content: flex-start;
 }
 
-.delivery__input{
+.delivery__date p{
+    width: 103px;
+}
+
+.delivery__input,
+.delivery__telephone{
     height: 40px;
-    border: none;
     resize: none;
-    border-radius: 4px;
+}
+
+.delivery__telephone{
+    width: 168px;
 }
 
 .delivery__time{
     display: flex;
     gap: 8px;
-    border-radius: 4px;
 }
 
 .delivery__time--transparent,
@@ -942,9 +1020,7 @@ header{
     display: flex;
     justify-content: center;
     width: 169px;
-    border: none;
     padding: 8px;
-    border-radius: 4px;
 }
 .delivery__time--green{
     color: white;
@@ -956,23 +1032,232 @@ header{
     color: #BFBFBF;
 }
 
+.delivery__getcode,
+.delivery__loginbymail{
+    background-color: #FF6633;
+    color: white;
+    width: 168px;
+    padding: 8px;
+}
+
+.delivery__loginbymail{
+    color: #70C05B;
+    background: none;
+}
+
+.delivery__getcode:hover{
+    transition: box-shadow 0.8s ease;
+    box-shadow: 4px 4px 16px rgba(255, 165, 0, 0.4);
+}
+
+.delivery__field-footer{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+/*page--orders*/
+.orders{
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.order__time{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.order__time img{
+    width: 24px;
+    height: 24px;
+}
+
+.order__district{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order__district-first,
+.order__district-next{
+    display: flex;
+    background: none;
+    padding: 8px;
+    gap: 8px;
+    align-items: center;
+    width: 139px;
+}
+
+.order__district-first{
+    color: white;
+    background-color: #70C05B;
+    justify-content: space-between;
+}
+
+.order__item{
+    display: flex;
+    margin-top: 30px;
+    gap: 16px;
+    align-items: center;
+}
+
+.order__item-value{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.order__item-deliveryman{
+    display: flex;
+    align-items: center;
+    width: 472px;
+    gap: 10px;
+    padding: 8px 10px;
+}
+
+.order__item-telephone{
+    display: flex;
+    gap: 8px;
+}
+
+.order__item-contact{
+    width: 125px;
+}
+
+.order__item-confirmed,
+.order__item-refund,
+.order__item-new{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    gap: 4px;
+    background-color: #008C49;
+    color: white;
+    padding: 8px;
+}
+
+.order__item-refund{
+    background-color: #D80000;
+}
+
+.order__item-new{
+    background: none;
+    color: #606060;
+}
+
+.order__item-new-text{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+.order__item-status-text,
+.order__item-confirmed-text,
+.order__item-refund-text,
+.order__item-new-text{
+    width: 152px;
+}
+
+.order__item-check,
+.order__item-upload{
+    display: flex;
+    gap: 8px;
+    width: 200px;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.order__item-upload{
+    background-color: #FF6633;
+    color: white;
+}
+
+.order__item-check img{
+    width: 24px;
+    height: 24px;
+}
+
+.order__products{
+    margin: 40px 0;
+    display: flex;
+    gap: 40px;
+}
+
+.order__product{
+    width: 272px;
+    height: 250px;
+    position: relative;
+    background-color: white;
+}
+
+.product-card__cart{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+
+.product-card__cart-counter{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.product-card__warehouse{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+.order__product-description{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+}
+
+.order__product-name{
+    color: #414141;
+    font-size: 12px;
+}
+
+.order__item-check-center{
+    display: flex;
+    justify-content: center;
+}
+
 /*none*/
-.page--catalog{
-    display: none;
-}
-/*--------------------------------*/
-.page--home{
-    display: none;
-}
-/*--------------------------------*/
-.page--product{
-    display: none;
-}
+/*.page--catalog{*/
+/*    display: none;*/
+/*}*/
+/*!*--------------------------------*!*/
+/*.page--home{*/
+/*    display: none;*/
+/*}*/
+/*!*--------------------------------*!*/
+/*.page--product{*/
+/*    display: none;*/
+/*}*/
 
+/*.page--cart{*/
+/*    display: none;*/
+/*}*/
 
-.page--cart{
-    display: none;
-}
+/*.page--delivery{*/
+/*    display: none;*/
+/*}*/
+
+/*.page--orders{*/
+/*    display: none;*/
+/*}*/
 /*none*/
 
 

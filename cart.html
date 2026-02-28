@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cart page</title>
+    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class='header__inner'>
+            <img class='header__logo-icon' src="IMAGES/Group.png" alt="header__logo-iconо">
+            <h1 class="header__logo-text">СЕВЕРЯНОЧКА</h1>
+            <div class='header__controls'>
+                <button class='catalog'>
+                    <img src="IMAGES/menu.png">
+                    Каталог
+                </button>
+                <div class='header__search'>
+                    <input class='header__search-input' type="text" placeholder=" Найти товар">
+                    <img src="IMAGES/search.png" alt="header__search-input">
+                </div>
+            </div>
+            <div class='header__nav'>
+                <a class='header__link header__link--favorite' href="#">
+                    <img class='heart' src='IMAGES/heart.png' alt="header__link--favorite">
+                    <p class='header__link-text'>Избранное</p>
+                </a>
+
+                <a class='header__link header__link--orders' href="#">
+                    <img class='orderImg' src='IMAGES/Frame%20211%20(3).png' alt="header__link--orders">
+                    <p class='header__link-text'>Заказы</p>
+                </a>
+
+                <a class='header__link header__link--cart' href="#">
+                    <img src='IMAGES/shopping-cart.png'alt="header__link--cart">
+                    <p class='header__link-text'>Корзина</p>
+                    <p class="header__link-counter">1</p>
+                </a>
+
+
+                <a class='header__profile' href="#">
+                    <img src="IMAGES/avatar.png" alt="Что-то">
+                    <p class="header__profile-name">Алексей</p>
+                    <img src='IMAGES/chevron-down.png' alt="Что-то">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class='hero'>
+        <img class="hero__image" src='IMAGES/Sliders.png' alt="Что-то">
+        <p class="hero__caption">Доставка бесплатно от 1000 ₽</p>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <section class="page page--cart">
+            <div class="cart-head">
+                <a class="cart-head__main">Главная</a>
+                <img src="IMAGES/chevron-right.png" alt="" class="arrow">
+                <p class="cart-head__cart--text">Корзина</p>
+            </div>
+
+            <div class="cart__header">
+                <div class="cart-head__cart">
+                    <h1 class="cart-title">Корзина</h1>
+                    <p class="cart-head__cart-wrapper">3</p>
+                </div>
+                <div class="cart__actions">
+                    <button class="cart__select"><img src="IMAGES/Checkbox%20(1).png" alt="" class="cart__select"></button>
+                    <button class="cart-select-all">Выделить всё</button>
+                    <button class="cart-delete-all">Удалить выбранные</button>
+                </div>
+            </div>
+
+            <div class="block-cart">
+                <div class="cart_items">
+                    <div class="cart-item">
+                        <div class="cart-item__image">
+                            <button class="cart-item__checkbox"><img src="IMAGES/Checkbox%20(2).png" alt=""></button>
+                            <img src="IMAGES/item222.png" alt="" class="cart-image__img">
+                        </div>
+                        <div class="cart-item__info">
+                            <h3 class="cart-item__title">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h3>
+                            <div class="cart-item__prices">
+                                <div class="cart-item__price--card">
+                                    <div class="cart__price-value ">
+                                        <p class="cart-item__amount">44,50 </p>
+                                        <p class="cart__price-currency">₽</p>
+                                    </div>
+                                </div>
+                                <p class="cart__price-unit">за шт.</p>
+                            </div>
+                        </div>
+                        <div class="cart__quantity-wrapper">
+                            <div class="cart__quantity">
+                                <button class="cart__quantity-btn--minus"><img src="IMAGES/minus.png" alt="minus"></button>
+                                <p class="cart__quantity-number">2</p>
+                                <button class="cart__quantity-btn--plus"><img src="IMAGES/plus.png" alt="plus" ></button>
+                            </div>
+                            <div class="cart__sum-price">
+                                <p class="cart__sum-price-number">89,00 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item__image">
+                            <button class="cart-item__checkbox"><img src="IMAGES/Checkbox%20(2).png" alt="" ></button>
+                            <img src="IMAGES/item222.png" alt="" class="cart-image__img">
+                        </div>
+                        <div class="cart-item__info">
+                            <h3 class="cart-item__title">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h3>
+                            <div class="cart-item__prices">
+                                <div class="cart-item__price--card">
+                                    <div class="cart-item__price-value">
+                                        <p class="cart-item__amount">44,50 </p>
+                                        <p class="cart__price-currency">₽</p>
+                                    </div>
+                                    <p class="cart-item__price-label">С картой</p>
+                                </div>
+                                <div class="cartcart__usual-card">
+                                    <div class="cart-price__usual-card">
+                                        <p class="cart-item__amount--regular">50,50 </p>
+                                        <p class="cart__price-currency--regular">₽</p>
+                                        <p class="cart-item__unit">за шт.</p>
+                                    </div>
+                                    <p class="cart-item__price-label">Обычная</p>
+                                </div>
+                                <p class="cart-item__promo">-10%</p>
+                            </div>
+                        </div>
+                        <div class="cart__quantity-wrapper">
+                            <div class="cart__quantity">
+                                <button class="cart__quantity-btn--minus"><img src="IMAGES/minus.png" alt="minus"></button>
+                                <p class="cart__quantity-number">2</p>
+                                <button class="cart__quantity-btn--plus"><img src="IMAGES/plus.png" alt="plus" ></button>
+                            </div>
+                            <div class="cart__sum-price">
+                                <p class="cart__sum-price-number">80,10 ₽</p>
+                                <s class="cart__sum-price-under-number">89,00 ₽</s>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cart-item">
+                        <div class="cart-item__image">
+                            <button class="cart-item__checkbox"><img src="IMAGES/Checkbox%20(2).png" alt=""></button>
+                            <img src="IMAGES/item222.png" alt="" class="cart-image__img">
+                        </div>
+                        <div class="cart-item__info">
+                            <h3 class="cart-item__title">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h3>
+                            <div class="cart-item__prices">
+                                <div class="cart-item__price--card">
+                                    <div class="cart__price-value ">
+                                        <p class="cart-item__amount">44,50 </p>
+                                        <p class="cart__price-currency">₽</p>
+                                    </div>
+                                </div>
+                                <p class="cart__price-unit">за шт.</p>
+                            </div>
+                        </div>
+                        <div class="cart__quantity-wrapper">
+                            <div class="cart__quantity">
+                                <button class="cart__quantity-btn--minus"><img src="IMAGES/minus.png" alt="minus"></button>
+                                <p class="cart__quantity-number">2</p>
+                                <button class="cart__quantity-btn--plus"><img src="IMAGES/plus.png" alt="plus" ></button>
+                            </div>
+                            <div class="cart__sum-price">
+                                <p class="cart__sum-price-number">89,00 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item-blure">
+                        <div class="cart-item__image">
+                            <button class="cart-item__checkbox"><img src="IMAGES/Checkbox%20(3).png" alt=""></button>
+                            <img src="IMAGES/item222.png" alt="" class="cart-image__img">
+                        </div>
+                        <div class="cart-item__info">
+                            <h3 class="cart-item__title">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h3>
+                            <div class="cart-item__prices">
+                                <div class="cart-item__price--card">
+                                    <div class="cart__price-value ">
+                                        <p class="cart-item__amount">44,50 </p>
+                                        <p class="cart__price-currency">₽</p>
+                                    </div>
+                                </div>
+                                <p class="cart__price-unit">за шт.</p>
+                            </div>
+                        </div>
+                        <div class="cart__quantity-wrapper">
+                            <div class="cart__quantity">
+                                <button class="cart__quantity-btn--minus"><img src="IMAGES/minus.png" alt="minus"></button>
+                                <p class="cart__quantity-number">2</p>
+                                <button class="cart__quantity-btn--plus"><img src="IMAGES/plus.png" alt="plus" ></button>
+                            </div>
+                            <div class="cart__sum-price">
+                                <p class="cart__sum-price-number">89,00 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="making-order">
+                    <div class="making-order__bonus-toggle">
+                        <img src="IMAGES/Toggle.png" alt="" class="making-order__toggle">
+                        <p class="making-order__writeoff">Списать 200 ₽ </p>
+                    </div>
+                    <p class="making-order__accumulated">На карте накоплено 200 ₽</p>
+                    <div class="making-order__summary">
+                        <div class="making-order__summary-left">
+                            <p class="making-order__quantity">3 товара</p>
+                            <p class="making-order__discount-label">Скидка</p>
+                        </div>
+                        <div class="making-order__summary-right">
+                            <p class="making-order__sum-items">258,10 ₽</p>
+                            <p class="making-order__discount">-8,01 ₽</p>
+                        </div>
+                    </div>
+                    <div class="making-order__total">
+                        <p class="making-order__total--result">Итог</p>
+                        <p class="making-order__total--priсe">250,09 ₽ </p>
+                    </div>
+                    <div class="making-order__bonus">
+                        <img src="IMAGES/smile.png" alt="smile">
+                        <span class="making-order__bonus-text">Вы получаете <span class="product__bonus-text--bold">100 бонусов</span></span>
+                    </div>
+                    <p class="making-order__min-limit">Минимальная сумма заказа 1000р</p>
+                    <button class="making-order__button">Оформить заказ</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="logo">
+                <img src="IMAGES/logo.png" alt="" class="logo">
+            </div>
+            <ul class="footer-list">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Политика обработки персональных данных</a></li>
+            </ul>
+            <div class="social">
+                <div class="inst">
+                    <img src="IMAGES/instagram.png" alt="">
+                </div>
+                <div class="vk">
+                    <img src="IMAGES/vkontakte.png" alt="">
+                </div>
+                <div class="facebook">
+                    <img src="IMAGES/facebook.png" alt="">
+                </div>
+                <div class="odnoklassnig">
+                    <img src="IMAGES/ok.png" alt="">
+                </div>
+                <div class="telephone">
+                    <img src="IMAGES/telephone.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
