@@ -5,12 +5,15 @@
 
 
 /* Components */
-@import "./components/header__inner.css";
-@import "components/main__catalog.css";
-@import "components/footer__info.css";
+@import "components/header.css";
+@import "components/catalog-categories.css";
+@import "components/footer.css";
+@import "components/about-us.css";
+@import "components/homepage.css";
 
 
-@import "components/catalog-section/catalog-section.css";
+
+@import "components/catalog-section.css";
 
 
 @import "components/blocks.css";

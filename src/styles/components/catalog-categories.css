@@ -1,0 +1,79 @@
+.main__yellow {
+    background-color: var(--color-yellow);
+}
+
+
+.main__distance {
+    padding-inline: 120px;
+}
+
+
+.catalog__header {
+    color: var(--color-dark-gray);
+}
+
+
+.catalog__product-categories-food {
+    display: grid;
+    justify-content: center;
+    padding-block: 60px 80px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    height: 1200px;
+    color: var(--color-white);
+
+    font-size: var(--text-size-m);
+    font-weight: 700;
+
+}
+
+
+.catalog__category-food-link {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+
+.catalog__category-food-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(112, 192, 91, 1) 0%, rgba(0, 0, 0, 0) 60%);
+    z-index: 1; /* Above image */
+}
+
+
+/* Hover Gradient (Orange) */
+.catalog__category-food-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255, 102, 51, 1) 0%, rgba(0, 0, 0, 0) 60%);
+    opacity: 0; /* Hidden by default */
+    transition: var(--transition-duration); /* Opacity transitions perfectly! */
+    z-index: 2; /* Above the green gradient */
+}
+
+
+/* When the link is hovered, fade in the orange layer */
+.catalog__category-food-link:hover::after {
+    opacity: 1;
+}
+
+
+.catalog__product-category-item-wide {
+    grid-column: span 2;
+}
+
+
+.catalog__category-food-link-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}

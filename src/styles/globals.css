@@ -1,5 +1,7 @@
 body {
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
+
 }
 
 
@@ -21,6 +23,10 @@ button {
 
 }
 
+
+
+
+
 input {
     border: none;
     outline: none;
@@ -40,6 +46,9 @@ h1 {
     color: var(--color-dark-gray);
 }
 
+h2 {
+    font-size: var(--text-size-xl);
+}
 
 
 
@@ -50,10 +59,22 @@ h1 {
 
 
 
-
-.catalog {
+.catalog-categories {
     display: none;
 }
+
+
+.catalog-section {
+    display: none;
+}
+
+
+.about-us {
+    display: none;
+}
+
+
+
 
 
 

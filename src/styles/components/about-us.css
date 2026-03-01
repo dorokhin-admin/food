@@ -1,0 +1,220 @@
+
+.main__about-us {
+    position: relative;
+    font-weight: 700;
+    color: var(--color-dark-gray);
+}
+
+
+
+
+.about-us-intro {
+    display: flex;
+
+}
+
+
+
+
+
+
+.about-us__info {
+
+    padding-inline: 30px;
+    z-index: 100;
+
+
+
+
+
+    .about-us__description {
+        font-size: var(--text-size-lg);
+        color: var(--background-color-orange);
+        padding-top: 16px;
+    }
+}
+
+
+
+.about-us__conversation {
+    position: relative;
+    width: 669px;
+    height: 371px;
+
+    .about-us__image-conversation-people {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 100;
+
+    }
+
+    .about-us__image-conversation-background{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+
+
+
+
+
+
+/* Базовый класс для всех шейпов */
+.about-us__shape {
+    position: absolute;
+    pointer-events: none;
+
+    /* REMOVE width: 100% */
+    /* Use 'width: auto' or 'width: max-content' */
+    width: auto;
+    height: auto;
+    display: block;
+
+}
+
+
+
+
+
+
+
+/* ШЕЙП ВВЕРХУ: Вылетает над заголовком "О компании" и хлебными крошками */
+.about-us__shape-position-1 {
+    top: 360px; /* Отрицательный top поднимает шейп выше контейнера */
+    left: -4vw;
+}
+
+
+.about-us__shape-position-2 {
+    top: 70px; /* Отрицательный top поднимает шейп выше контейнера */
+    left: -3vw;
+}
+
+.about-us__shape-position-3 {
+    top: 340px; /* Отрицательный top поднимает шейп выше контейнера */
+    left: 10vw;
+}
+
+.about-us__shape-position-4 {
+    top: 300px; /* Отрицательный top поднимает шейп выше контейнера */
+    left: 35vw;
+}
+
+
+.about-us__shape-position-5 {
+    top: 90px; /* Отрицательный top поднимает шейп выше контейнера */
+    left: 53vw;
+    transform: rotate(-115deg);
+}
+
+
+.about-us__shape-position-6 {
+    top: 170px; /* Отрицательный top поднимает шейп выше контейнера */
+    left: 75vw;
+    transform: rotate(75deg);
+
+}
+
+
+.about-us__shape-position-7 {
+    top: 70px; /* Отрицательный top поднимает шейп выше контейнера */
+    right: 2vw;
+    transform: rotate(070deg);
+    scale: 1.5;
+}
+
+
+
+.about-us__shape-position-8 {
+    top: 350px; /* Отрицательный top поднимает шейп выше контейнера */
+    right: -3vw;
+    transform: rotate(0deg);
+    scale: 1.5;
+}
+
+.about-us__advantages {
+    display: flex;
+    align-items: flex-start;
+    gap: 75px;
+    margin-block: 120px;
+
+
+
+
+
+    .about-us__advantage-title {
+        font-size: var(--text-size-m);
+        font-weight: 400;
+
+    }
+
+    .about-us__advantage-description {
+        font-size: var(--text-size-lg);
+        margin-top: 16px;
+    }
+}
+
+
+.about-us__advantage-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.about-us__advantage-wrapper::before {
+    content: "";             /* Required to render the element */
+    flex-shrink: 0;          /* Prevents the image from being squished by long text */
+
+    /* Size and Image */
+    width: 30px;
+    height: 30px;
+    background-image: url("../../media/images/about-us-advantage-check-mark.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+
+
+
+
+.about-us__gratitude-description-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about-us__gratitude {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+
+    .about-us__gratitude-description {
+        font-size: var(--text-size-lg);
+        color: var(--color-green);
+        background-color: var(--color-green-light);
+        padding: 20px;
+    }
+}
+
+
+
+.about-us__gratitude-description-wrapper::before {
+    content: "";
+    display: inline-block;
+
+    margin-right: -2px;
+    vertical-align: middle;
+    width: 41px;
+    height: 40px;
+    background: url("../../media/svgs/dialog-piece.svg") no-repeat ;
+    background-size: contain;
+}

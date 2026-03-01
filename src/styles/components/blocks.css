@@ -14,3 +14,23 @@
         color: var(--color-dark-gray);
     }
 }
+
+
+.product-card:hover {
+    transition-duration: var(--transition-duration);
+    box-shadow: 3px 3px 10px -5px var(--background-color-orange);
+}
+
+
+
+
+.background-orange-light {
+    background-color: var(--color-orange-light);
+}
+
+
+
+.background-green-light {
+    background-color: var(--color-green-light);
+}
+
