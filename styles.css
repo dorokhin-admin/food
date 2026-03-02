@@ -256,6 +256,7 @@ header{
 }
 
 
+
 /*promotions*/
 .special-stocks{
     margin-top: 40px;
@@ -1270,32 +1271,6 @@ header{
     justify-content: center;
 }
 
-/*none*/
-/*.page--catalog{*/
-/*    display: none;*/
-/*}*/
-/*!*--------------------------------*!*/
-/*.page--home{*/
-/*    display: none;*/
-/*}*/
-/*!*--------------------------------*!*/
-/*.page--product{*/
-/*    display: none;*/
-/*}*/
-
-/*.page--cart{*/
-/*    display: none;*/
-/*}*/
-
-/*.page--delivery{*/
-/*    display: none;*/
-/*}*/
-
-/*.page--orders{*/
-/*    display: none;*/
-/*}*/
-/*none*/
-
 
     /*footer*/
 footer{
@@ -1324,3 +1299,8 @@ footer{
     gap: 16px;
     margin-left: auto;
 }
+
+.hidden{
+    display: none;
+}
+
