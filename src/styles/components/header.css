@@ -9,9 +9,25 @@
     gap: 60px;
 
     font-weight: 400;
+
+
 }
 
+.header {
+    background-color: #ffffff; /* Add this! */
+    box-shadow: 0 10px 15px 0 hotpink;
+    z-index: 1111;
+    position: relative; /* Ensures z-index and shadow render correctly */
+}
 
+/* You can remove the shadow from .header__inner to avoid "double shadows" */
+.header__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    font-weight: 400;
+}
 
 .header__menu {
     padding-inline: 12px;
@@ -100,7 +116,12 @@
     font-size: var(--text-size-xs);
 
     .header__menu-item {
-        color: var(--color-dark-gray)
+        color: var(--color-dark-gray);
+    }
+
+
+    .header__menu-item-relative {
+        position: relative;
     }
 
     .header__menu-item-profile {
@@ -108,6 +129,8 @@
         color: var(--color-dark)
 
     }
+
+
 }
 
 
@@ -136,5 +159,21 @@
 }
 
 
+.header__menu-profile-image {
+    border-radius: 50%;
+}
 
 
+.header__menu-item-link-cart-count {
+    position: absolute;
+
+    top: -10px;
+    right: 12px;
+
+    font-size: var(--text-size-s);
+    color: var(--color-white);
+    padding: 0 5px;
+
+
+;
+}

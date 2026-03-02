@@ -49,15 +49,16 @@
                         <span class="">Заказы</span>
                     </a>
                 </li>
-                <li class="header__menu-item">
+                <li class="header__menu-item header__menu-item-relative">
                     <a class="header__menu-item-link" href="">
+                        <span class="header__menu-item-link-cart-count background-orange">1</span>
                         <img src="media/svgs/menu-icon-cart.svg" alt="" class="header__menu-image" width="24" height="24">
                         <span class="">Корзина</span>
                     </a>
                 </li>
                 <li class="header__menu-item-profile ">
                     <button class="header__menu-item-profile-button">
-                        <img src="./media/images/menu-profile-image.png" alt="" class="header__menu-image" width="40" height="40">
+                        <img src="./media/images/menu-profile-image.png" alt="" class="header__menu-profile-image" width="40" height="40">
                         <span>Алексей</span>
                         <img src="media/svgs/menu-profile-arrow.svg" alt="" width="13" height="7">
                     </button>
@@ -497,19 +498,37 @@
             <div class="homepage__special-offers">
                 <h2 class="homepage__special-offers-title">Специальные предложения</h2>
                 <div class="homepage__special-offer-main">
-                    <div class="homepage__special-offer background-orange-light">
+                    <div class="homepage__special-offer homepage__special-offer-shadow-orange-light background-orange-light ">
                         <div class="homepage__special-offer-info">
                             <h3 class="homepage__special-offer-info-title">Оформите карту «Северяночка»</h3>
                             <p class="homepage__special-offer-info-description">И получайте бонусы при покупке в магазинах и на сайте</p>
                         </div>
                         <img src="media/images/homepage-offer-image-1.png" alt="" class="" width="207" height="138">
                     </div>
-                    <div class="homepage__special-offer background-green-light homepage__special-offer-relative">
+                    <div class="homepage__special-offer homepage__special-offer-shadow-green-light background-green-light homepage__special-offer-relative">
                         <div class="homepage__special-offer-info">
                             <h3 class="homepage__special-offer-info-title">Покупайте акционные товары</h3>
                             <p class="homepage__special-offer-info-description">И получайте вдвое больше бонусов</p>
                         </div>
-                        <img class="homepage__special-offer-info" src="media/images/homepage-offer-image-2.png" alt="" width="207" height="138">
+                        <img class="homepage__special-offer-info-image" src="media/images/homepage-offer-image-2.png" alt="" width="193" height="186">
+                        <div class="">
+                            <img class="homepage__special-offer-info-image-1" src="./media/images/homepage-special-offer-cart/₽.png" alt="" width="54" height="55">
+                            <img class="homepage__special-offer-info-image-2" src="./media/images/homepage-special-offer-cart/₽-1.png" alt="" width="50" height="52">
+                            <img class="homepage__special-offer-info-image-3" src="./media/images/homepage-special-offer-cart/₽-2.png" alt="" width="31" height="33">
+                            <img class="homepage__special-offer-info-image-4" src="./media/images/homepage-special-offer-cart/₽-3.png" alt="" width="27" height="30">
+                            <img class="homepage__special-offer-info-image-5" src="./media/images/homepage-special-offer-cart/+.png" alt="" width="27" height="26">
+                            <img class="homepage__special-offer-info-image-6" src="./media/images/homepage-special-offer-cart/+-1.png" alt="" width="40" height="39">
+                            <img class="homepage__special-offer-info-image-7" src="./media/images/homepage-special-offer-cart/+-2.png" alt="" width="18" height="17">
+                            <img class="homepage__special-offer-info-image-8" src="./media/images/homepage-special-offer-cart/+-3.png" alt="" width="12" height="11">
+                            <img class="homepage__special-offer-info-image-9" src="./media/images/homepage-special-offer-cart/+-4.png" alt="" width="12" height="11">
+                            <img class="homepage__special-offer-info-image-10" src="./media/images/homepage-special-offer-cart/+-5.png" alt="" width="12" height="11">
+                            <img class="homepage__special-offer-info-image-11" src="./media/images/homepage-special-offer-cart/+-6.png" alt="" width="12" height="11">
+                            <img class="homepage__special-offer-info-image-12" src="./media/images/homepage-special-offer-cart/+-7.png" alt="" width="12" height="11">
+                            <img class="homepage__special-offer-info-image-13" src="./media/images/homepage-special-offer-cart/+-8.png" alt="" width="9" height="8">
+                            <img class="homepage__special-offer-info-image-14" src="./media/images/homepage-special-offer-cart/+-9.png" alt="" width="33" height="31">
+
+                        </div>
+
                     </div>
                 </div>
 
@@ -518,13 +537,13 @@
                 <h2 class="homepage__store-locations-title">Наши магазины</h2>
                 <div class="homepage__store-locations-info">
                     <div class="homepage__store-locations-info-selection">
-                        <button class="" type="button">п.Щельяюр</button>
-                        <button class="" type="button">д.Вертеп</button>
-                        <button class="" type="button">с.Краснобор</button>
-                        <button class="" type="button">д.Диюр</button>
+                        <button class="homepage__store-locations-info-selection-button active" type="button">п.Щельяюр</button>
+                        <button class="homepage__store-locations-info-selection-button background-padding" type="button">д.Вертеп</button>
+                        <button class="homepage__store-locations-info-selection-button" type="button">с.Краснобор</button>
+                        <button class="homepage__store-locations-info-selection-button" type="button">д.Диюр</button>
                     </div>
                     <div class="homepage__store-locations-info-map">
-                        <img src="" alt="">
+                        <img src="./media/images/location-map.png" alt="" width="100%" height="354%">
                     </div>
                 </div>
             </div>
@@ -535,25 +554,25 @@
                 </div>
                 <div class="homepage__news-feed-main">
                     <div class="homepage__news-feed-card">
-                        <img src="" alt="" class="">
+                        <img class="homepage__news-feed-card-image" src="./media/images/homepage-feed--image-1.png" alt="" width="376" height="162">
                         <span class="homepage__news-feed-card-date">05.03.2021</span>
                         <h3 class="homepage__news-feed-card-title">Режим использования масок и перчаток на территории магазинов</h3>
                         <p class="homepage__news-feed-card-description">Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
-                        <a href="" class="homepage__news-feed-card-link background-green-light">Подробнее</a>
+                        <a href="" class="homepage__news-feed-card-link background-green-light background-padding-equal">Подробнее</a>
                     </div>
                     <div class="homepage__news-feed-card">
-                        <img src="" alt="" class="">
+                        <img class="homepage__news-feed-card-image" src="./media/images/homepage-feed--image-2.png" alt="" width="376" height="165">
                         <span class="homepage__news-feed-card-date">05.03.2021</span>
                         <h3 class="homepage__news-feed-card-title">Весеннее настроение для каждой</h3>
                         <p class="homepage__news-feed-card-description">8 Марта – это не просто Международный женский день, это ещё день тюльпанов, приятных сюрпризов и праздничных тёплых пожеланий.</p>
-                        <a href="" class="homepage__news-feed-card-link background-green-light">Подробнее</a>
+                        <a href="" class="homepage__news-feed-card-link background-green-light background-padding-equal">Подробнее</a>
                     </div>
                     <div class="homepage__news-feed-card">
-                        <img src="" alt="" class="">
+                        <img class="homepage__news-feed-card-image" src="./media/images/homepage-feed--image-3.png" alt="" width="376" height="162">
                         <span class="homepage__news-feed-card-date">22.02.2020</span>
                         <h3 class="homepage__news-feed-card-title">ЗОЖ или ФАСТФУД. А вы на чьей стороне? Голосуем!</h3>
                         <p class="homepage__news-feed-card-description">Голосуйте за любимые категории, выбирайте категорию-победителя в мобильном приложении и получайте кешбэк 10% баллами в апреле!</p>
-                        <a href="" class="homepage__news-feed-card-link">Подробнее</a>
+                        <a href="" class="homepage__news-feed-card-link background-green-light background-padding-equal">Подробнее</a>
                     </div>
                 </div>
 

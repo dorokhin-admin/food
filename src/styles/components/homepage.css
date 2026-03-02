@@ -1,3 +1,9 @@
+
+.homepage h1, h2, h3  {
+    color: var(--color-dark-gray);
+}
+
+
 .homepage__header {
     width: 100vw;
     position: relative;
@@ -11,6 +17,9 @@
     background: url("../../media/images/homepage-header-background.png") no-repeat center / cover;
 }
 
+.homepage__product-section-link-text {
+    color: var(--color-gray-1);
+}
 
 .homepage__header-title {
     position: absolute;
@@ -88,8 +97,6 @@
 
 .homepage__product-section-card-header-image {
     width: 100%;
-    height: 160px;
-
     object-fit: contain;
 }
 
@@ -183,10 +190,21 @@
 
 .homepage__special-offer {
     display: flex;
+    flex: 1;
     gap: 21px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 9px 32px;
+
+}
+
+
+.homepage__special-offer-shadow-orange-light {
+    box-shadow: 5px 5px 10px 0 var(--color-orange-light);
+}
+
+.homepage__special-offer-shadow-green-light {
+    box-shadow: 5px 5px 10px 0 var(--color-green-light);
 }
 
 .homepage__special-offer-info {
@@ -195,5 +213,209 @@
 }
 
 
+.homepage__special-offer-relative {
+    position: relative;
+}
+
+.homepage__special-offer-info-image {
+    z-index: 100;
+}
+
+.homepage__special-offer-info-image-1 {
+    position: absolute;
+    top: 10%;
+    right: 35%;
+}
+
+.homepage__special-offer-info-image-2 {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+}
+
+.homepage__special-offer-info-image-3 {
+    position: absolute;
+    top: 75%;
+    right: 15%;
+}
 
 
+.homepage__special-offer-info-image-4 {
+    position: absolute;
+    top: 75%;
+    right: 40%;
+}
+
+
+.homepage__special-offer-info-image-5 {
+    position: absolute;
+    top: 6%;
+    right: 25%;
+}
+
+.homepage__special-offer-info-image-6 {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+
+.homepage__special-offer-info-image-7 {
+    position: absolute;
+    top: 30%;
+    right: 46%;
+}
+
+
+.homepage__special-offer-info-image-8 {
+    position: absolute;
+    top: 10%;
+    right: 70%;
+}
+
+
+.homepage__special-offer-info-image-9 {
+    position: absolute;
+    top: 80%;
+    right: 48%;
+}
+
+
+.homepage__special-offer-info-image-10 {
+    position: absolute;
+    top: 6%;
+    right: 12%;
+}
+
+
+.homepage__special-offer-info-image-11 {
+    position: absolute;
+    top: 85%;
+    right: 3%;
+}
+
+
+.homepage__special-offer-info-image-12 {
+    position: absolute;
+    top: 80%;
+    right: 23%;
+}
+
+.homepage__special-offer-info-image-13 {
+    position: absolute;
+    top: 85%;
+    right: 95%;
+}
+
+.homepage__special-offer-info-image-14 {
+    position: absolute;
+    top: 50%;
+    right: 40%;
+}
+
+
+
+.homepage__special-offer-info-title {
+    font-size: var(--text-size-lg);
+}
+
+
+.homepage__special-offer-info-description {
+    font-size: var(--text-size-sm);
+    color: var(--color-dark-gray);
+}
+
+
+
+
+.homepage__store-locations-title {
+    margin-top: 120px;
+}
+
+.homepage__store-locations-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 24px
+}
+
+
+.homepage__store-locations-info-selection {
+    display: flex;
+    gap: 24px;
+
+}
+
+.homepage__store-locations-info-selection-button {
+
+    padding: 4px 8px;
+    color: var(--color-gray-1);
+
+}
+
+.homepage__store-locations-info-selection-button.active {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+
+
+.homepage__news-feed {
+    margin-top: 120px;
+}
+
+
+.homepage__news-feed-main {
+    margin-top: 40px;
+}
+
+
+.homepage__news-feed-main {
+    display: flex;
+    gap: 40px;
+
+}
+
+
+.homepage__news-feed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1 ;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+}
+
+
+
+
+.homepage__news-feed-card-image {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.homepage__news-feed-card-description {
+    margin-bottom: auto;
+    padding-inline: 10px;
+    color: var(--color-dark-gray);
+}
+
+
+.homepage__news-feed-card-date {
+    padding-inline: 10px;
+    color: var(--color-gray);
+    font-size: var(--text-size-xs);
+}
+
+.homepage__news-feed-card-title {
+    padding-inline: 10px;
+}
+
+
+.homepage__news-feed-card-link {
+    margin: 0 10px 10px;
+    color: var(--color-green);
+}
