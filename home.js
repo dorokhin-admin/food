@@ -1,24 +1,37 @@
+const cart =[];
 
-const addli = document.querySelectorAll('.li');
+const massive = [
+    { id: 1, name: 'Товар А', quantity: 2 },
+    { id: 2, name: 'Товар Б', quantity: 5 },
+    { id: 3, name: 'Товар в', quantity: 3 },
+    { id: 4, name: 'Товар у', quantity: 1 },
+]
 
-
-addli.forEach(li => {
-    li.addEventListener('click', (e) => {
-        e.target.closest('.cart-li').add.style.backgroundColor = 'red';
-
+function productPostCart(arr, id){
+    arr.forEach(item => {
+        if (item.id == id){
+            if (cart.includes(item.id)){
+                return item;
+            }else{
+                cart.push(item)
+            }
+        }
     })
-})
+}
 
+productPostCart(massive, 1)
+productPostCart(massive, 2)
+productPostCart(massive, 4)
+console.log(cart)
 
-
-
-
-
-
-
-
-
-
+// const div = document.createElement('div')
+// const hero = document.querySelector('.hero')
+// div.innerHTML = `
+//     <button>1111111111111</button>
+//     <button>2222222222222</button>
+//     <button>333333333333</button>
+// `;
+// hero.appendChild(div);
 
 
 
