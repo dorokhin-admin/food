@@ -1,37 +1,160 @@
-const cart =[];
+const addInCart = document.querySelector(".product-card__add-to-cart");
+const parrentButton = document.querySelector(".cart_items");
 
-const massive = [
-    { id: 1, name: 'Товар А', quantity: 2 },
-    { id: 2, name: 'Товар Б', quantity: 5 },
-    { id: 3, name: 'Товар в', quantity: 3 },
-    { id: 4, name: 'Товар у', quantity: 1 },
+
+
+let cart =[];
+
+const products = [
+    {
+        id:1,
+        imgSrc: 'IMAGES/blini.png',
+        promo: -10,
+        priceDiscont: 44.50,
+        priceDiscontText: 'С картой',
+        price: 50.50,
+        priceText: 'Обычная',
+        name:'Г/Ц Блинчики с мясом вес,',
+        country:'Россия',
+    },
+    {
+        id:2,
+        imgSrc: 'IMAGES/milk.png',
+        promo: -10,
+        priceDiscont: 44.50,
+        priceDiscontText: 'С картой',
+        price: 50.50,
+        priceText: 'Обычная',
+        name:'Г/Ц Блинчики с мясом вес,',
+        country:'Россия',
+    },
+    {
+        id:3,
+        imgSrc: 'IMAGES/kolbasi.png',
+        promo: -10,
+        priceDiscont: 44.50,
+        priceDiscontText: 'С картой',
+        price: 50.50,
+        priceText: 'Обычная',
+        name:'Г/Ц Блинчики с мясом вес,',
+        country:'Россия',
+    }
 ]
+products.forEach(product => {
+    const productCard = document.createElement('div')
+    productCard.innerHTML = `
+          <article class="product__card" data-id="${product.id}">
+            <div class="product-card__image">
+                <img class='product-card__img' src="${product.imgSrc}" alt="product">
+                <p class="product__card-promo" data-promo="${product.promo}">-${product.promo}<span>%</span></p>
+            </div>
+            <button class="product-card__favorite">
+                <img src="IMAGES/Button.png" alt="favorite">
+            </button>
+            <div class="product__card-price">
+                <div class="">
+                    <p class="product__card-price-discont" data-price="${product.priceDiscont}">${product.priceDiscont}<span>₽</span></p>
+                    <p class="product__card-price-discont-text">${product.priceDiscontText}</p>
+                </div>
+                <div class="">
+                    <p class="product__card-price-regular" data-price="50.50">${product.price}<span>₽</span></p>
+                    <p class="product__card-price-regular-text">${product.priceText}</p>
+                </div>
+            </div>
+            <p class="product__card-discription">${product.name}</p>
+            <p class="product__card-discription">${product.country}</p>
+            <div class="product__card-rating">
+                <img class="product__star" src="IMAGES/star.png" alt="star" >
+                <img class="product__star" src="IMAGES/star.png" alt="star" >
+                <img class="product__star" src="IMAGES/star.png" alt="star" >
+                <img class="product__star" src="IMAGES/star.png" alt="star" >
+                <img class="product__star" src="IMAGES/star.png" alt="star" >
+            </div>
+            <button class="product-card__add-to-cart">
+                В корзину
+            </button>
+            <button class="product-card__added-to-cart">
+                В корзине
+            </button>
+          </article>
+    `;
+    const productslist = document.querySelector(".products__list");
+    productslist.appendChild(productCard);
+})
+
+
+
+addInCart.addEventListener("click", (e) => {
+    const div = document.createElement('div')
+    products.forEach(product => {
+    div.innerHTML = `
+        <div class="cart-item">
+                            <div class="cart-item__image">
+                                <button class="cart-item__checkbox"><img src="IMAGES/Checkbox%20(2).png" alt=""></button>
+                                <img src="IMAGES/item222.png" alt="" class="cart-image__img">
+                            </div>
+                            <div class="cart-item__info">
+                                <h3 class="cart-item__title">${product.name}</h3>
+                                <div class="cart-item__prices">
+                                    <div class="cart-item__price--card">
+                                        <div class="cart__price-value ">
+                                            <p class="cart-item__amount"></p>
+                                            <p class="cart__price-currency">₽</p>
+                                        </div>
+                                    </div>
+                                    <p class="cart__price-unit">за шт.</p>
+                                </div>
+                            </div>
+                            <div class="cart__quantity-wrapper">
+                                <div class="cart__quantity">
+                                    <button class="cart__quantity-btn--minus"><img src="IMAGES/minus.png" alt="minus"></button>
+                                    <p class="cart__quantity-number">2</p>
+                                    <button class="cart__quantity-btn--plus"><img src="IMAGES/plus.png" alt="plus" ></button>
+                                </div>
+                                <div class="cart__sum-price">
+                                    <p class="cart__sum-price-number">89,00 ₽</p>
+                                </div>
+                            </div>
+    `;
+    parrentButton.appendChild(div);
+})
+})
 
 function productPostCart(arr, id){
-    arr.forEach(item => {
-        if (item.id == id){
-            if (cart.includes(item.id)){
-                return item;
-            }else{
-                cart.push(item)
-            }
-        }
-    })
+    const item = arr.find(item => item.id === id);
+    if(item){
+        item.quantity += 1;
+    }else{
+        cart.push(item);
+    }
 }
+productPostCart(products, id)
 
-productPostCart(massive, 1)
-productPostCart(massive, 2)
-productPostCart(massive, 4)
-console.log(cart)
+// function productPostCart(arr, id){
+//     const product = arr.find(item => item.id === id);
+//
+//     const productInCart = cart.find(item =>  item.id === id);
+//     if (productInCart) {
+//         productInCart.quantity = productInCart.quantity + 1;
+//     } else{
+//         cart.push({ ...product });
+//     }
+// }
+//
+// localStorage.setItem('cart', JSON.stringify(cart))
+//
+// storedCart =  localStorage.getItem('cart')
+// if (storedCart) {
+//     cart = JSON.parse(storedCart)
+// }else{
+//     cart = []
+// }
+//
+// console.log(cart)
+// // const div = document.createElement('div')
+// // const hero = document.querySelector('.hero')
 
-// const div = document.createElement('div')
-// const hero = document.querySelector('.hero')
-// div.innerHTML = `
-//     <button>1111111111111</button>
-//     <button>2222222222222</button>
-//     <button>333333333333</button>
-// `;
-// hero.appendChild(div);
+// // hero.appendChild(div);
 
 
 
