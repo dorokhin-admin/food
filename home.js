@@ -148,7 +148,8 @@ function renderCart() {
             div.innerHTML = `
              <div class="cart-item" data-id="${product.id}">
                 <div class="cart-item__image">
-                    <button class="cart-item__checkbox"><img src="IMAGES/Checkbox%20(2).png" alt="" ></button>
+                    <button class="cart-item__checkbox-select active"><img src="IMAGES/Checkbox%20(2).png" alt="" ></button>
+                    <button class="cart-item__checkbox-empty hidden"><img src="IMAGES/Checkbox%20(3).png" alt="" ></button>
                     <img src="${product.imgSrc}" alt="" class="cart-image__img">
                 </div>
                 <div class="cart-item__info">
@@ -198,7 +199,7 @@ function getMakingOrderDiv() {
         const wrapper = document.createElement('div')
         wrapper.innerHTML = `<div class="making-order">
                         <div class="making-order__bonus-toggle">
-                            <button class="making-order__toggle"><div class="making-order__toggle-circle"></div></button>
+                            <button class="making-order__toggle "><div class="making-order__toggle-circle"></div></button>
                             <p class="making-order__writeoff">Списать 200 ₽ </p>
                         </div>
                         <p class="making-order__accumulated">На карте накоплено 200 ₽</p>
@@ -299,31 +300,75 @@ function updateMakingOrder(cart) {
     makingOrderButton.style.backgroundColor = '#FF6633';
     makingOrderButton.style.color = '#FFFFFF';
     const toggle = document.querySelector('.making-order__toggle');
+
     let bonusApplied = false;
 
     toggle.addEventListener('click', () => {
+
         const makingOrder = getMakingOrderDiv();
         const totalElement = makingOrder.querySelector('.making-order__total--priсe');
+
+        if(!totalElement) return;
+
+        const active = toggle.classList.toggle('active');
+
+        bonusApplied = active;
 
         let total = cart.reduce((sum, product) => {
             const price = product.price * (1 - (product.promo || 0) / 100);
             return sum + price * product.quantity;
         }, 0);
 
-        if(total <= 1000) return;
-
-        const active = toggle.classList.toggle('active');
-
-        if(active && !bonusApplied){
+        if(total > 1000 && bonusApplied){
             total -= 200;
-            bonusApplied = true;
-        } else if(!active && bonusApplied){
-            total += 200;
-            bonusApplied = false;
         }
 
         totalElement.innerText = `${total.toFixed(2)} ₽`;
     });
 }
 
-const check = document.querySelector('.making-order__check');
+
+
+blockCart.addEventListener('click', e => {
+    const cartItem = e.target.closest('.cart-item');
+    if(!cartItem) return;
+
+    if(e.target.closest('.cart-item__checkbox-select')){
+        cartItem.querySelector('.cart-item__checkbox-empty').classList.toggle('hidden');
+        cartItem.querySelector('.cart-item__checkbox-select').classList.toggle('hidden');
+        cartItem.style.opacity = 0.5;
+    }
+    if(e.target.closest('.cart-item__checkbox-empty')){
+        cartItem.querySelector('.cart-item__checkbox-empty').classList.toggle('hidden');
+        cartItem.querySelector('.cart-item__checkbox-select').classList.toggle('hidden');
+        cartItem.style.opacity = 1;
+    }
+})
+
+const cartSelectAll = document.querySelector('.cart-select-all');
+cartSelectAll.addEventListener('click', () => {
+    const cartItems = blockCart.querySelectorAll('.cart-item');
+
+    const hasUnselected = Array.from(cartItems).some(cartItem => {
+        const cartItemSelect = cartItem.querySelector('.cart-item__checkbox-select');
+        return cartItemSelect.classList.contains('hidden');
+    })
+
+    cartItems.forEach(cartItem => {
+        const cartItemSelect = cartItem.querySelector('.cart-item__checkbox-select');
+        const cartItemEmpty = cartItem.querySelector('.cart-item__checkbox-empty');
+
+        if(hasUnselected) {
+            cartItemSelect.classList.remove('hidden');
+            cartItemEmpty.classList.add('hidden');
+            cartItem.style.opacity = 1;
+        }else{
+            cartItemSelect.classList.add('hidden');
+            cartItemEmpty.classList.remove('hidden');
+            cartItem.style.opacity = 0.5;
+        }
+    })
+})
+
+
+

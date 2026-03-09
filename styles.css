@@ -805,7 +805,8 @@ header{
     height: 80px;
 }
 
-.cart-item__checkbox {
+.cart-item__checkbox-select,
+.cart-item__checkbox-empty{
     position: absolute;
     top: -18px;
     left: 8px;
@@ -1280,7 +1281,7 @@ header{
     justify-content: center;
 }
 .making-order__toggle{
-    background-color: #70C05B;
+    background-color: #808080;
     width: 46px;
     height: 24px;
     border-radius: 49px;
