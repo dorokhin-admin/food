@@ -7,6 +7,7 @@ type Product = {
 
 const Product1 = {id: 1, name: 'anume', price: 22}
 const Product2 = {id: 2, name: 'asdasd', price: 11, description:'sadadsa'}
+const Product3 = {id: 3 , name: 'asdasd', price: 11, description:'sadadsa'}
 
 function getProductDescription(product: Product){
     if(product.description){
@@ -17,4 +18,5 @@ function getProductDescription(product: Product){
 }
 
 getProductDescription(Product2)
-getProductDescription(Product1)
+console.log(getProductDescription(Product1))
+console.log('log')

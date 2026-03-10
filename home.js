@@ -106,7 +106,7 @@ document.addEventListener('click', (e) => {
         if(productinCart){
                 productinCart.quantity++;
             }else{
-                cart.push({...product, quantity: 1});
+                cart.push({...product});
             }
         renderCart();
     }
@@ -353,7 +353,7 @@ cartSelectAll.addEventListener('click', () => {
         const cartItemSelect = cartItem.querySelector('.cart-item__checkbox-select');
         return cartItemSelect.classList.contains('hidden');
     })
-
+console.log(hasUnselected)
     cartItems.forEach(cartItem => {
         const cartItemSelect = cartItem.querySelector('.cart-item__checkbox-select');
         const cartItemEmpty = cartItem.querySelector('.cart-item__checkbox-empty');
