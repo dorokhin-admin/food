@@ -1,24 +1,8 @@
-type Product = {
-    id: number
-    name: string
-    price: number
-    discount?: number
-}
+type Role = 'admin' | 'user' | 'group';
 
-const myProducts: Product[] = [
-    { id: 1, name: "Phone", price: 1000, discount: 10 },
-    { id: 2, name: "Laptop", price: 2000 },
-    { id: 3, name: "Tablet", price: 500, discount: 20 }
+let roles : Role [] = [
+    'admin',
+    'user',
+    'group',
+    'sadsad'
 ]
-
-function getFinalPrice(product: Product): number{
-
-         if(product.discount !== undefined){
-            return product.price - product.price * product.discount / 100
-        }else{
-            return product.price
-        }
-
-}
-
-console.log(getFinalPrice(myProducts[0]))

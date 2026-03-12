@@ -1,14 +1,5 @@
-var myProducts = [
-    { id: 1, name: "Phone", price: 1000, discount: 10 },
-    { id: 2, name: "Laptop", price: 2000 },
-    { id: 3, name: "Tablet", price: 500, discount: 20 }
-];
-function getFinalPrice(product) {
-    if (product.discount !== undefined) {
-        return product.price - product.price * product.discount / 100;
-    }
-    else {
-        return product.price;
-    }
+var now = 'dark';
+function setMode(mode) {
+    console.log('set mode', mode);
 }
-console.log(getFinalPrice(myProducts[0]));
+setMode(now);
