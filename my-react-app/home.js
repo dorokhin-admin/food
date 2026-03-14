@@ -18,11 +18,11 @@ products.forEach(product => {
             </button>
             <div class="product__card-price">
                 <div class="">
-                    <p class="product__card-price-discont" data-price="${product.priceDiscont}">${discontPrice} ₽</p>
+                    <p class="product__card-price-discont" data-price="${product.priceDiscont}">${discontPrice} ${product.currency}</p>
                     <p class="product__card-price-discont-text">${product.priceDiscontText}</p>
                 </div>
                 <div class="">
-                    <p class="product__card-price-regular" data-price="50.50">${product.price} ₽</p>
+                    <p class="product__card-price-regular" data-price="50.50">${product.price} ${product.currency}</p>
                     <p class="product__card-price-regular-text">${product.priceText}</p>
                 </div>
             </div>
@@ -111,14 +111,14 @@ function renderCart() {
                         <div class="cart-item__price--card">
                             <div class="cart-item__price-value">
                                 <p class="cart-item__amount">44,50 </p>
-                                <p class="cart__price-currency">₽</p>
+                                <p class="cart__price-currency">${product.currency}</p>
                             </div>
                             <p class="cart-item__price-label">С картой</p>
                         </div>
                         <div class="cartcart__usual-card">
                             <div class="cart-price__usual-card">
                                 <p class="cart-item__amount--regular">50,50 </p>
-                                <p class="cart__price-currency--regular">₽</p>
+                                <p class="cart__price-currency--regular">${product.currency}</p>
                                 <p class="cart-item__unit">за шт.</p>
                             </div>
                             <p class="cart-item__price-label">Обычная</p>
@@ -133,8 +133,8 @@ function renderCart() {
                         <button class="cart__quantity-btn--plus"><img src="src/IMAGES/plus.png" alt="plus" ></button>
                     </div>
                     <div class="cart__sum-price">
-                        <p class="cart__sum-price-number">${discontSumPrice} ₽</p>
-                        <s class="cart__sum-price-under-number">${sumPrice} ₽</s>
+                        <p class="cart__sum-price-number">${discontSumPrice} ${product.currency}</p>
+                        <s class="cart__sum-price-under-number">${sumPrice} ${product.currency}</s>
                     </div>
                 </div>
              </div>`
