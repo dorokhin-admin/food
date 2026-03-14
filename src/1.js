@@ -1,5 +1,14 @@
-var now = 'dark';
-function setMode(mode) {
-    console.log('set mode', mode);
+function handlePayment(response) {
+    switch (response.status) {
+        case 'pending':
+            console.log("Платёж обрабатывается");
+            break;
+        case 'paid':
+            console.log("Оплачено:", response.amount);
+            break;
+        case 'failed':
+            console.log("Ошибка:", response.reason);
+            break;
+    }
 }
-setMode(now);
+handlePayment({ status: 'paid', amount: 0 });
