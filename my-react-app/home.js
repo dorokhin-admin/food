@@ -1,13 +1,13 @@
 const parrentButton = document.querySelector(".cart_items");
 
-let cart =[];
+let cart = [];
 
-import {products} from './products.ts';
+import { products } from "./products.ts";
 
-products.forEach(product => {
-    const productCard = document.createElement('div')
-    const discontPrice = product.price - (product.price * product.promo  / 100);
-    productCard.innerHTML = `
+products.forEach((product) => {
+  const productCard = document.createElement("div");
+  const discontPrice = product.price - (product.price * product.promo) / 100;
+  productCard.innerHTML = `
           <article class="product__card" data-id="${product.id}">
             <div class="product-card__image">
                 <img class='product-card__img' src="${product.imgSrc}" alt="product">
@@ -43,62 +43,64 @@ products.forEach(product => {
             </button>
           </article>
     `;
-    const productslists = document.querySelectorAll(".products__list");
-    productslists.forEach(productslist => {
-        productslist.appendChild(productCard.cloneNode(true));
-    })
-})
+  const productslists = document.querySelectorAll(".products__list");
+  productslists.forEach((productslist) => {
+    productslist.appendChild(productCard.cloneNode(true));
+  });
+});
 
-document.addEventListener('click', (e) => {
-    if(e.target.closest('.product-card__add-to-cart')){
-        const cardWrapper = e.target.closest('.product__card')//достаем родителя кнопки
-        const productId = Number(cardWrapper.dataset.id);//достаем айди карточки
-        const product = products.find(product => product.id === productId)//находим и выводим карточку на которую клик
-        const productinCart = cart.find(product => product.id === productId)//находим и выводим карточку на которую клик
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".product-card__add-to-cart")) {
+    const cardWrapper = e.target.closest(".product__card"); //достаем родителя кнопки
+    const productId = Number(cardWrapper.dataset.id); //достаем айди карточки
+    const product = products.find((product) => product.id === productId); //находим и выводим карточку на которую клик
+    const productinCart = cart.find((product) => product.id === productId); //находим и выводим карточку на которую клик
 
-        if(productinCart){
-                productinCart.quantity++;
-            }else{
-                cart.push({...product});
-            }
-        renderCart();
+    if (productinCart) {
+      productinCart.quantity++;
+    } else {
+      cart.push({ ...product });
     }
+    renderCart();
+  }
 
-        if(e.target.closest('.cart__quantity-btn--plus')){
-            const cardWrapper = e.target.closest('.cart-item')
-            const productId = Number(cardWrapper.dataset.id);
-            const productInCart = cart.find(p => p.id === productId)
-            productInCart.quantity++;
-            renderCart()
-        }
+  if (e.target.closest(".cart__quantity-btn--plus")) {
+    const cardWrapper = e.target.closest(".cart-item");
+    const productId = Number(cardWrapper.dataset.id);
+    const productInCart = cart.find((p) => p.id === productId);
+    productInCart.quantity++;
+    renderCart();
+  }
 
-        if(e.target.closest('.cart__quantity-btn--minus')) {
-            const cardWrapper = e.target.closest('.cart-item')
-            const productId = Number(cardWrapper.dataset.id)
-            const productInCart = cart.find(p => p.id === productId)
-            if (productInCart.quantity > 1) {
-                productInCart.quantity--;
-                renderCart()
-            }else{
-                const index = cart.findIndex( item => item.id === productId)
-                if(index !== -1){
-                    cart.splice(index, 1);
-                    renderCart()
-                }
-            }
-        }
-    })
-
+  if (e.target.closest(".cart__quantity-btn--minus")) {
+    const cardWrapper = e.target.closest(".cart-item");
+    const productId = Number(cardWrapper.dataset.id);
+    const productInCart = cart.find((p) => p.id === productId);
+    if (productInCart.quantity > 1) {
+      productInCart.quantity--;
+      renderCart();
+    } else {
+      const index = cart.findIndex((item) => item.id === productId);
+      if (index !== -1) {
+        cart.splice(index, 1);
+        renderCart();
+      }
+    }
+  }
+});
 
 function renderCart() {
-    parrentButton.innerHTML = '';
-    cart.forEach(product => {
-        const sumPrice = product.quantity * product.price;
-        const discontSumPrice = (product.quantity * (product.price - (product.price * product.promo / 100))).toFixed(2);
+  parrentButton.innerHTML = "";
+  cart.forEach((product) => {
+    const sumPrice = product.quantity * product.price;
+    const discontSumPrice = (
+      product.quantity *
+      (product.price - (product.price * product.promo) / 100)
+    ).toFixed(2);
 
-        const div = document.createElement('div')
+    const div = document.createElement("div");
 
-            div.innerHTML = `
+    div.innerHTML = `
              <div class="cart-item" data-id="${product.id}">
                 <div class="cart-item__image">
                     <button class="cart-item__checkbox-select active"><img src="src/IMAGES/Checkbox%20(2).png" alt="" ></button>
@@ -137,20 +139,18 @@ function renderCart() {
                         <s class="cart__sum-price-under-number">${sumPrice} ${product.currency}</s>
                     </div>
                 </div>
-             </div>`
-        parrentButton.appendChild(div);
-    })
-    updateMakingOrder(cart)
+             </div>`;
+    parrentButton.appendChild(div);
+  });
+  updateMakingOrder(cart);
 }
 
-
-const blockCart = document.querySelector('.block-cart')
+const blockCart = document.querySelector(".block-cart");
 function getMakingOrderDiv() {
-
-    let makingOrder = blockCart.querySelector('.making-order');
-    if (!makingOrder) {
-        const wrapper = document.createElement('div')
-        wrapper.innerHTML = `<div class="making-order">
+  let makingOrder = blockCart.querySelector(".making-order");
+  if (!makingOrder) {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = `<div class="making-order">
                         <div class="making-order__bonus-toggle">
                             <button class="making-order__toggle "><div class="making-order__toggle-circle"></div></button>
                             <p class="making-order__writeoff">Списать 200 ₽ </p>
@@ -176,152 +176,163 @@ function getMakingOrderDiv() {
                         </div>
                         <p class="making-order__min-limit">Минимальная сумма заказа 1000р</p>
                         <button class="making-order__button">Оформить заказ</button>
-                </div>`
+                </div>`;
 
-        blockCart.appendChild(wrapper)
+    blockCart.appendChild(wrapper);
 
-        makingOrder = blockCart.querySelector('.making-order')
-    }
-    return makingOrder
+    makingOrder = blockCart.querySelector(".making-order");
+  }
+  return makingOrder;
 }
 
 function updateMakingOrder(cart) {
-    const makingOrder = getMakingOrderDiv()
+  const makingOrder = getMakingOrderDiv();
 
-    if(cart.length === 0 && makingOrder) {
-        makingOrder.remove();
-        return;
-    }
+  if (cart.length === 0 && makingOrder) {
+    makingOrder.remove();
+    return;
+  }
 
-    if (cart.length === 0) return;
+  if (cart.length === 0) return;
 
-    let activeMakingOrder = makingOrder || getMakingOrderDiv();
+  let activeMakingOrder = makingOrder || getMakingOrderDiv();
 
-    let sumResult = 0;
-    let totalQuantity = 0;
-    let sumPromo = 0
-    let total = 0
-    let bonus = 0
+  let sumResult = 0;
+  let totalQuantity = 0;
+  let sumPromo = 0;
+  let total = 0;
+  let bonus = 0;
 
+  cart.forEach((product) => {
+    const discontPrice = product.price - (product.price * product.promo) / 100;
+    const price = product.promo !== 0 ? discontPrice : product.price;
 
-    cart.forEach(product => {
+    sumResult += product.quantity * product.price;
+    totalQuantity += product.quantity;
+    sumPromo += product.quantity * ((product.price * product.promo) / 100);
+    total += product.quantity * price;
+  });
 
-        const discontPrice = product.price - (product.price * product.promo  / 100);
-        const price = product.promo !== 0
-            ? discontPrice
-            : product.price;
+  activeMakingOrder.querySelector("[data-cart-counter]").innerText =
+    `${totalQuantity} товара`;
+  activeMakingOrder.querySelector(".making-order__total--priсe").innerText =
+    `${sumResult.toFixed(2)} ₽`;
+  activeMakingOrder.querySelector(".making-order__sum-items").innerText =
+    `${sumResult.toFixed(2)} ₽`;
+  activeMakingOrder.querySelector(".making-order__discount").innerText =
+    `- ${sumPromo.toFixed(2)} ₽`;
+  activeMakingOrder.querySelector(".making-order__total--priсe").innerText =
+    `${total.toFixed(2)} ₽`;
 
-        sumResult += product.quantity * product.price;
-        totalQuantity += product.quantity;
-         sumPromo += product.quantity * (product.price * product.promo / 100);
-         total += product.quantity * price;
-    });
+  const divBonus = activeMakingOrder.querySelector(".making-order__bonus");
+  const minSum = activeMakingOrder.querySelector(".making-order__min-limit");
+  const makingOrderButton = activeMakingOrder.querySelector(
+    ".making-order__button",
+  );
 
+  if (total <= 1000) {
+    minSum.style.display = "block";
+    makingOrderButton.style.backgroundColor = "#FCD5BA";
+    makingOrderButton.style.color = "#FF6633";
 
+    divBonus.innerHTML = "";
+    return;
+  }
 
-    activeMakingOrder.querySelector('[data-cart-counter]').innerText = `${totalQuantity} товара`
-    activeMakingOrder.querySelector('.making-order__total--priсe').innerText = `${sumResult.toFixed(2)} ₽`;
-    activeMakingOrder.querySelector('.making-order__sum-items').innerText = `${sumResult.toFixed(2)} ₽`;
-    activeMakingOrder.querySelector('.making-order__discount').innerText = `- ${sumPromo.toFixed(2)} ₽`
-    activeMakingOrder.querySelector('.making-order__total--priсe').innerText = `${total.toFixed(2)} ₽`
-
-    const divBonus = activeMakingOrder.querySelector('.making-order__bonus');
-    const minSum = activeMakingOrder.querySelector('.making-order__min-limit')
-    const makingOrderButton = activeMakingOrder.querySelector('.making-order__button')
-
-
-    if(total <= 1000) {
-        minSum.style.display = 'block';
-        makingOrderButton.style.backgroundColor = '#FCD5BA';
-        makingOrderButton.style.color = '#FF6633';
-
-        divBonus.innerHTML = '';
-        return;
-    }
-
-    bonus = total * 0.1;
-    if(!activeMakingOrder.querySelector('.product__bonus-text--bold')){
+  bonus = total * 0.1;
+  if (!activeMakingOrder.querySelector(".product__bonus-text--bold")) {
     divBonus.innerHTML = `
              <img src="src/IMAGES/smile.png" alt="smile">
              <span class="making-order__bonus-text">Вы получаете <span
                      class="product__bonus-text--bold"> </span></span>
-             `}
-    activeMakingOrder.querySelector('.product__bonus-text--bold').innerText = `${bonus.toFixed(0)} бонусов`
+             `;
+  }
+  activeMakingOrder.querySelector(".product__bonus-text--bold").innerText =
+    `${bonus.toFixed(0)} бонусов`;
 
-    minSum.style.display = 'none';
+  minSum.style.display = "none";
 
-    makingOrderButton.style.backgroundColor = '#FF6633';
-    makingOrderButton.style.color = '#FFFFFF';
-    const toggle = document.querySelector('.making-order__toggle');
+  makingOrderButton.style.backgroundColor = "#FF6633";
+  makingOrderButton.style.color = "#FFFFFF";
+  const toggle = document.querySelector(".making-order__toggle");
 
-    let bonusApplied = false;
+  let bonusApplied = false;
 
-    toggle.addEventListener('click', () => {
+  toggle.addEventListener("click", () => {
+    const makingOrder = getMakingOrderDiv();
+    const totalElement = makingOrder.querySelector(
+      ".making-order__total--priсe",
+    );
 
-        const makingOrder = getMakingOrderDiv();
-        const totalElement = makingOrder.querySelector('.making-order__total--priсe');
+    if (!totalElement) return;
 
-        if(!totalElement) return;
+    const active = toggle.classList.toggle("active");
 
-        const active = toggle.classList.toggle('active');
+    bonusApplied = active;
 
-        bonusApplied = active;
+    let total = cart.reduce((sum, product) => {
+      const price = product.price * (1 - (product.promo || 0) / 100);
+      return sum + price * product.quantity;
+    }, 0);
 
-        let total = cart.reduce((sum, product) => {
-            const price = product.price * (1 - (product.promo || 0) / 100);
-            return sum + price * product.quantity;
-        }, 0);
+    if (total > 1000 && bonusApplied) {
+      total -= 200;
+    }
 
-        if(total > 1000 && bonusApplied){
-            total -= 200;
-        }
-
-        totalElement.innerText = `${total.toFixed(2)} ₽`;
-    });
+    totalElement.innerText = `${total.toFixed(2)} ₽`;
+  });
 }
 
+blockCart.addEventListener("click", (e) => {
+  const cartItem = e.target.closest(".cart-item");
+  if (!cartItem) return;
 
+  if (e.target.closest(".cart-item__checkbox-select")) {
+    cartItem
+      .querySelector(".cart-item__checkbox-empty")
+      .classList.toggle("hidden");
+    cartItem
+      .querySelector(".cart-item__checkbox-select")
+      .classList.toggle("hidden");
+    cartItem.style.opacity = 0.5;
+  }
+  if (e.target.closest(".cart-item__checkbox-empty")) {
+    cartItem
+      .querySelector(".cart-item__checkbox-empty")
+      .classList.toggle("hidden");
+    cartItem
+      .querySelector(".cart-item__checkbox-select")
+      .classList.toggle("hidden");
+    cartItem.style.opacity = 1;
+  }
+});
 
-blockCart.addEventListener('click', e => {
-    const cartItem = e.target.closest('.cart-item');
-    if(!cartItem) return;
+const cartSelectAll = document.querySelector(".cart-select-all");
+cartSelectAll.addEventListener("click", () => {
+  const cartItems = blockCart.querySelectorAll(".cart-item");
 
-    if(e.target.closest('.cart-item__checkbox-select')){
-        cartItem.querySelector('.cart-item__checkbox-empty').classList.toggle('hidden');
-        cartItem.querySelector('.cart-item__checkbox-select').classList.toggle('hidden');
-        cartItem.style.opacity = 0.5;
+  const hasUnselected = Array.from(cartItems).some((cartItem) => {
+    const cartItemSelect = cartItem.querySelector(
+      ".cart-item__checkbox-select",
+    );
+    return cartItemSelect.classList.contains("hidden");
+  });
+  console.log(hasUnselected);
+  cartItems.forEach((cartItem) => {
+    const cartItemSelect = cartItem.querySelector(
+      ".cart-item__checkbox-select",
+    );
+    const cartItemEmpty = cartItem.querySelector(".cart-item__checkbox-empty");
+
+    if (hasUnselected) {
+      cartItemSelect.classList.remove("hidden");
+      cartItemEmpty.classList.add("hidden");
+      cartItem.style.opacity = 1;
+    } else {
+      cartItemSelect.classList.add("hidden");
+      cartItemEmpty.classList.remove("hidden");
+      cartItem.style.opacity = 0.5;
     }
-    if(e.target.closest('.cart-item__checkbox-empty')){
-        cartItem.querySelector('.cart-item__checkbox-empty').classList.toggle('hidden');
-        cartItem.querySelector('.cart-item__checkbox-select').classList.toggle('hidden');
-        cartItem.style.opacity = 1;
-    }
-})
-
-const cartSelectAll = document.querySelector('.cart-select-all');
-cartSelectAll.addEventListener('click', () => {
-    const cartItems = blockCart.querySelectorAll('.cart-item');
-
-    const hasUnselected = Array.from(cartItems).some(cartItem => {
-        const cartItemSelect = cartItem.querySelector('.cart-item__checkbox-select');
-        return cartItemSelect.classList.contains('hidden');
-    })
-console.log(hasUnselected)
-    cartItems.forEach(cartItem => {
-        const cartItemSelect = cartItem.querySelector('.cart-item__checkbox-select');
-        const cartItemEmpty = cartItem.querySelector('.cart-item__checkbox-empty');
-
-        if(hasUnselected) {
-            cartItemSelect.classList.remove('hidden');
-            cartItemEmpty.classList.add('hidden');
-            cartItem.style.opacity = 1;
-        }else{
-            cartItemSelect.classList.add('hidden');
-            cartItemEmpty.classList.remove('hidden');
-            cartItem.style.opacity = 0.5;
-        }
-    })
-})
-
-
-
+  });
+});
+//dsadas
