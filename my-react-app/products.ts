@@ -2,7 +2,7 @@ export const enum Currency {
     USD = 'USD',
     EUR = 'EUR',
     RUB = 'RUB',
-}//saddas
+}
 
 type Product = {
     id: number;
