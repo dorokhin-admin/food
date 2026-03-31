@@ -144,6 +144,7 @@ function renderCart() {
   });
   updateMakingOrder(cart);
 }
+console.log
 
 const blockCart = document.querySelector(".block-cart");
 function getMakingOrderDiv() {
